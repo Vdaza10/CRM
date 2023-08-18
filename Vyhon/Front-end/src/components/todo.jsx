@@ -10,13 +10,17 @@ import Menu from "./menu/principal"
 import PerfilUsuario from "./Perfilusuario"
 import Retorno9 from "./integracionMarkenting"
 import CrearTarea from "./CreacionTarea"
+import Principal from "./login"
+import Registrarse from "./Registro/Input/Registro"
 
 const Todo = () => {
     return(
         <BrowserRouter>
             <Routes>
                 {/* Rutas para el menu principal */}
-                <Route path="/" element = {<Menu/>}> </Route>
+                <Route path="/" element = {<Principal/>}> </Route>
+                <Route path="/menu" element = {<Menu/>}> </Route>
+                <Route path="/registrarse" element = {<Registrarse/>}> </Route>
                 {/* Rutas para diferentes sesiones */}
                 <Route path="/negocios" element = {<Retorno2/>}></Route>
                 <Route path="/contactos" element = {<Retorno3/>}></Route>

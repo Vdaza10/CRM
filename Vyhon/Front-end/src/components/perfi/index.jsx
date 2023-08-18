@@ -40,7 +40,7 @@ function Retorno1() {
                         <hr />
                     </Caja3>
                     <Caja4>
-                        <p style={{ fontStyle: "italic", fontSize: "16px" , color:"black", marginLeft:"7px" }}>Salir</p>
+                    <p style={{ fontStyle: "italic", fontSize: "16px" , color:"black", marginLeft:"7px" }}><Link to={"/"} style={{textDecoration:"none", color:"black"}}>Salir</Link></p>
                     </Caja4>
                 </Container>
             </DivContainer>
