@@ -13,17 +13,17 @@ export const getUsers = async(req,res) =>{
 
 export const createUsers = async(req,res) =>{
     try {
-        const  {correo, contraseña, nombre, empresa} = req.body;
+        const  {nombreUsuario, nombreEmpresa, correo, contraseña} = req.body;
         const [rows] = await pool.query(
-            'INSERT INTO registro (correo, contraseña, nombre, empresa) VALUES (?,?,?,?)',
-            [correo, contraseña, nombre, empresa])
+            'INSERT INTO registro (nombreUsuario, nombreEmpresa, correo, contraseña) VALUES (?,?,?,?)',
+            [nombreUsuario, nombreEmpresa, correo, contraseña])
 
         res.send({
-            id:rows.insertId, 
+            id:rows.insertId,
+            nombreUsuario,
+            nombreEmpresa,
             correo, 
-            contraseña, 
-            nombre, 
-            empresa
+            contraseña
         })
     } catch (error) {
         return res.status(500).json({message: 'Algo va mal'})
