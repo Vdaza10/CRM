@@ -5,7 +5,7 @@ import * as contactoCrtl from "../controladores/contacto.js"; //contacto//
 import * as negocioCrtl from "../controladores/negocio.js"; //negocio//
 import * as segmentoCrtl from "../controladores/segmento.js"; //segmento//
 import * as tareaCrtl from "../controladores/tarea.js"; //tareas// */
-
+import * as logincrtl from "../controladores/login.js"
 
 
 //registro
@@ -19,6 +19,9 @@ router.patch('/users', userCrtl.updateUsers);
 
 router.delete('/users', userCrtl.deleteUsers);
 
+//Login
+
+router.post('/login',  logincrtl.Login)
 
 //empresa//
 

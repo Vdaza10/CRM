@@ -53,7 +53,7 @@ const  Registrarse = () => {
                 <Input
                 onChange={(e) => Validacion(e)}
                 type = "email"
-                // placeholder ="ejemplo@kmas.com"
+                placeholder="Ingrese su Correo"
                 required>
                 </Input><br />
                 <span style={{

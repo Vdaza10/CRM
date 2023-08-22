@@ -2,7 +2,10 @@ import React,{useState} from "react";
 import { Div1 , Container1 , Caja , Parrafo, Img , Parrafo1 , Caja1 , Input , Caja2 , Boton1 ,Boton2 , App, Area } from "./styled.jsx";
 import imagen from "../img/img_x.webp"
 
+
 function Retorno8() {
+
+
     const [cerrar, setCerrar] = useState(true); // Estado para controlar la visibilidad del componente Retorno8
     
     // Función para cerrar el componente al hacer clic en la imagen
