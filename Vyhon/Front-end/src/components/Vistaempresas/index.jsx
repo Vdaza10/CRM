@@ -12,7 +12,7 @@ function Retorno7() {
             <Menu/> {/* Muestra el componente Menu */}
                 <Container>
                       {/* Muestra una imagen */}
-                    <img src={imagen} alt="img" style={{width:'30%',height:'45%'}} />
+                    <img src={imagen} alt="img" style={{width:'30%',height:'40%',marginTop:"4%"}} />
                     <Parrafo><h3>Crea empresas</h3></Parrafo>
                     <Parrafo>Mantén el historial de todos los negocios con tu base de empresas.</Parrafo>
                     <Boton onClick={() => setActive(!active)}>Crear empresa</Boton>

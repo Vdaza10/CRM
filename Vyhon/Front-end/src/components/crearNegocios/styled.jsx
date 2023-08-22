@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-position: absolute;
-    height: 70vh;
+    position: absolute;
+    height: 89vh;
+    width: 30vh;
     top: 92px;
     right: 70px;
     background-color: white;
 `;
 export const Principal = styled.div`
     height: 850px;
+    background-color: white;
     width: 130%;
     border: solid 1px black;
 `
@@ -35,7 +37,6 @@ export const Img = styled.img`
 export const Caja2 = styled.div`
     height: 75%;
     padding-left: 20px;
-    background-color: white;
 `
 export const Parrafo1 = styled.p`
     font-size: 15px;
@@ -78,6 +79,7 @@ export const Boton1 = styled.button`
 
     &:hover {
         background-color: #3eabee76;
+        color: black;
     }
 
     &:focus {
@@ -96,6 +98,7 @@ export const Boton2 = styled.button`
 
     &:hover {
         background-color: #3eabee76;
+        color: gray;
     }
 
     &:focus {

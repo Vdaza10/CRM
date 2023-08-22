@@ -43,4 +43,4 @@ const Registro = () => {
         </Fondo>
     )
 }
-export default Registro
+export default Registro

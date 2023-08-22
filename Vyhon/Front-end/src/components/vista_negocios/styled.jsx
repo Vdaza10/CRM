@@ -17,6 +17,7 @@ export const Container2 = styled.div`
 `
 // Caja rectangular con fondo de color
 export const Caja = styled.div`
+    border-radius: 10px;
     height: 100%;
     width: 19%;
     background-color: #0000004c;
@@ -81,6 +82,7 @@ export const Boton1 = styled.button`
 
     &:hover {
         background-color: #3eaaee93;
+        color: black;
     }
 
     &:focus {
@@ -93,12 +95,14 @@ export const Boton2 = styled.button`
     background-color: white;
     color: #49a3db;
     width: 20%;
-    border: none;
+    height: 36px;
+    border: #80808051 solid 1px;
     font-size: 16px; 
     cursor: pointer;
 
     &:hover {
         background-color: #3eaaee93;
+        color: gray;
     }
 
     &:focus {

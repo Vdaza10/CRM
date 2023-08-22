@@ -59,6 +59,7 @@ export const Boton1 = styled.button`
 
     &:hover {
         background-color: #3eaaee93;
+        color: black;
     }
 
     &:focus {
@@ -78,6 +79,7 @@ export const Boton2 = styled.button`
 
     &:hover {
         background-color: #3eaaee93;
+        color: gray;
     }
 
     &:focus {

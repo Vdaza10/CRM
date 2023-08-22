@@ -2,8 +2,8 @@ import { Routes, Route, BrowserRouter } from "react-router-dom"
 
 import Retorno2 from "./vista_negocios"
 import Retorno3 from "./contacto"
-import Retorno4 from "./crearcontacto"
 import Retorno5 from "./tarea"
+import Retorno4 from "./crearcontacto"
 import Retorno6 from "./creacionTareasOpciones"
 import Retorno7 from "./Vistaempresas"
 import Menu from "./menu/principal"
@@ -11,7 +11,7 @@ import PerfilUsuario from "./Perfilusuario"
 import Retorno9 from "./integracionMarkenting"
 import CrearTarea from "./CreacionTarea"
 import Principal from "./login"
-import Registrarse from "./Registro/Input/Registro"
+import Registro from "./Registro/Fondo/registroPrincipal"
 
 const Todo = () => {
     return(
@@ -20,7 +20,7 @@ const Todo = () => {
                 {/* Rutas para el menu principal */}
                 <Route path="/" element = {<Principal/>}> </Route>
                 <Route path="/menu" element = {<Menu/>}> </Route>
-                <Route path="/registrarse" element = {<Registrarse/>}> </Route>
+                <Route path="/registrarse" element = {<Registro/>}> </Route>
                 {/* Rutas para diferentes sesiones */}
                 <Route path="/negocios" element = {<Retorno2/>}></Route>
                 <Route path="/contactos" element = {<Retorno3/>}></Route>

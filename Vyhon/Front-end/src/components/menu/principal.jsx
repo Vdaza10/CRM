@@ -1,6 +1,6 @@
 import React, {useState}from "react";
 import { Link } from "react-router-dom"
-import { Contenedor, ContenedorBusqueda, Despegable, Flecha, ImagenPerfil, Logo, MenuItem, Menucontainer, Menudesplegable, Navegacion, NombreUsuario, PerfilUsiario} from "./menu";
+import { Contenedor, ContenedorBusqueda, Despegable, Flecha, ImagenPerfil, Logo, MenuItem, Menucontainer, Menudesplegable, Navegacion, NombreUsuario, PerfilUsiario,Buscar} from "./menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import imagen from "../img/logito.png";
@@ -22,6 +22,7 @@ const Menu = () => {
         setPerfilDesplegable(!perfilDesplegable); 
     };
     
+    const [busca, setBusca] = useState("")
     return (
         <Contenedor >
             {/* Barra de navegación */}
@@ -45,6 +46,11 @@ const Menu = () => {
                         <MenuItem style={{ textDecoration: "none", color: "white" }}>Marketing</MenuItem>  {/* Otro ítem del menú */}
             </Menucontainer>
             <ContenedorBusqueda>
+            <Buscar
+                type="search"
+                placeholder="buscar"
+                onChange={(e) => setBusca(e.target.value)}
+                />
                     <FontAwesomeIcon icon={faSearch} size="lg" style={{ color: "with" }}/>
 
                 {/* Menú desplegable de perfil de usuario */}

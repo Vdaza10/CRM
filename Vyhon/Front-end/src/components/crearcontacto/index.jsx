@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Div1, Container1, Caja, Parrafo, Img, Parrafo1, Caja1, Input, Parrafo2, Caja2, Boton1, Boton2 , ContactoSelect } from "./styled";
+import { Div1,  Container1, Caja, Parrafo, Img, Parrafo1, Caja1, Input, Parrafo2, Caja2, Boton1, Boton2 , ContactoSelect } from "./styled";
 import imagen from "../img/img_x.webp"
 
 function Retorno4() {

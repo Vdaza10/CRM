@@ -39,8 +39,6 @@ function Retorno8() {
                     <Caja2>
                         <Boton2>Cancelar</Boton2>
                         <Boton1 >Crear empresa</Boton1>
-                    
-
                     </Caja2>
                 </Container1> 
             </Div1>

@@ -13,7 +13,7 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     cursor: pointer;
 `
@@ -31,7 +31,7 @@ export const Boton = styled.button`
     background-color: #3eabee;
     color: white;
     width: 10%;
-    height: 30px;
+    height: 35px;
     border: none;
     margin: 5%;
     font-size: 16px; 
@@ -42,6 +42,7 @@ export const Boton = styled.button`
 
     &:hover {
         background-color: #3eaaee93;
+        color: black;
     }
 
     &:focus {

@@ -80,5 +80,5 @@ export const CuadritoSelecionar = styled.div`
     height: 18px;
 `
 export const Seleccionar = styled.input`
-    cursor: pointer;
+    cursor: pointer;
 `

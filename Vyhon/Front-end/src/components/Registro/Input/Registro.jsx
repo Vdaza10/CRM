@@ -28,8 +28,8 @@ const  Registrarse = () => {
         Axios.post("http://localhost:3005/users",{
         correo : email,
         contraseña :password,
-        nombre :nombre,
-        empresa :empresa
+        nombreUsuario :nombre,
+        nombreEmpresa :empresa
         })
         .then((response) => {
             console.log(response.data);
@@ -115,4 +115,4 @@ const  Registrarse = () => {
 }
 
 
-export default Registrarse
+export default Registrarse

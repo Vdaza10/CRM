@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Fondo,Contenedor,Titulo,Parrafo,Input, Button, Olvidar } from "./styled";
+import { Fondo,Contenedor,Titulo,Parrafo,Input, Button, Olvidar , ContainerUltimo } from "./styled";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -32,8 +32,10 @@ const [body, setBody] = useState({email: "", password: ""});
     return(
         <Fondo>
             <Contenedor>
-                <Titulo>Login</Titulo>
-                <Parrafo>Correo: <br />
+                <Titulo>¡Bienvenidos a VYHON!</Titulo>
+                <Parrafo>
+                    <h4 style={{margin:"0"}}>Email</h4>
+                </Parrafo>
 
                 <Input 
                 type="email"
@@ -42,8 +44,11 @@ const [body, setBody] = useState({email: "", password: ""});
                 name="email">
                 </Input>
 
+                
+                <Parrafo>
+                    <h4 style={{margin:"0"}}>Contraseña</h4>
                 </Parrafo>
-                <Parrafo>Contraseña:<br/>
+                
 
                 <Input 
                 type="Password"
@@ -52,11 +57,14 @@ const [body, setBody] = useState({email: "", password: ""});
                 name="password">
                 </Input>
 
-                </Parrafo>
-                <Olvidar href="https://www.google.com/?hl=es">Olvidaste tu contraseña?</Olvidar> <br />
-                <Olvidar onClick={registroUsuario} ><Link to={"/registrarse"} style={{color:"aqua"}}>Registrate</Link></Olvidar> <br />
                 
-                <Button type="submit" onClick={ingresaUsuario}><Link to={"/menu"} style={{textDecoration:"none",color:"black"}}>Iniciar sesión</Link></Button>
+                <ContainerUltimo>
+                <Link to={"/menu"} style={{width:"100%",height:"30%", display:"flex", textDecoration:"none", justifyContent:"center"}}><Button type="submit" onClick={ingresaUsuario}>Iniciar sesión</Button></Link>
+                <br />
+                <Olvidar href="https://www.google.com/?hl=es" style={{margin:"0"}}><h4 style={{margin:"0"}}>Olvidaste tu contraseña?</h4></Olvidar> 
+                <br />
+                <Olvidar onClick={registroUsuario} ><Link to={"/registrarse"} style={{color:"#0099ff99"}}><h4 style={{margin:"0"}}>Registrate</h4></Link></Olvidar>
+                </ContainerUltimo>
             </Contenedor>
         </Fondo>
     )

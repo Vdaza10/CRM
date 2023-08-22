@@ -4,15 +4,17 @@ import Select from "react-select";
 
 export const Container = styled.div`
 position: absolute;
-    height: 70vh;
+    height: 90vh;
+    width: 18%;
     top: 92px;
     right: 0px;
     display: flex; 
     justify-content: center; 
 `;
 export const Principal = styled.div`
-    height: 859px;
-    width: 330px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
     border: solid 1px black;
 `
 export const Caja1 = styled.div`
@@ -44,9 +46,9 @@ export const Parrafo1 = styled.p`
     font-style: italic;
 `
 export const Input = styled.input`
-    height: 5%;
+    height: 6%;
     width: 94%;
-    font-size: 15px;
+    font-size: 17px;
 `
 
 export const Caja3 = styled.div`
@@ -72,6 +74,7 @@ export const Boton1 = styled.button`
 
     &:hover {
         background-color: #3eabee76;
+        color: black;
     }
 
     &:focus {
@@ -90,6 +93,7 @@ export const Boton2 = styled.button`
 
     &:hover {
         background-color: #3eabee76;
+        color: gray;
     }
 
     &:focus {
@@ -97,7 +101,7 @@ export const Boton2 = styled.button`
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);}
 `
 export const ContainerInput = styled.div`
-    height: 5%;
+    height: 6.5%;
     width: 96%;
     display: flex;
     align-items: center;
@@ -111,15 +115,18 @@ export const ContainerInput = styled.div`
     ];
     
     export const ContactoSelect = () => (
-        <Select
+        <div style={{height:"6%", width:"96%" , border:"solid gray 1px"}}>
+            <Select
         placeholder="Seleccionar"
         options={options}
         styles={{
             control: (provided) => ({
             ...provided,
-            border: 'solid 1px gray',
-            height: '38px',
-            width: '96%', // Cambia la altura según tus necesidades
+            // border: 'solid 1px gray',
+            height: '110%',
+            border:"none",
+            fontSize:"17px",
+            width: '100%', // Cambia la altura según tus necesidades
             // Otras propiedades de estilo
             }),
             // Puedes personalizar otros estilos aquí
@@ -134,6 +141,7 @@ export const ContainerInput = styled.div`
             },
         })}
         />
+        </div>
     );
     
     export default ContactoSelect;

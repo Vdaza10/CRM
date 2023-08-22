@@ -89,5 +89,5 @@ export const Imagen1 = styled.img`
     width: 90px;
     height: 40px;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 20px;
 `
