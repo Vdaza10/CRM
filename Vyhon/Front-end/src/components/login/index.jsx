@@ -1,46 +1,54 @@
 import React, { useState } from "react";
-import { Fondo,Contenedor,Titulo,Parrafo,Input, Button, Olvidar , ContainerUltimo } from "./styled";
+import { Fondo,Contenedor,Titulo,Parrafo,Input, Button, Olvidar , ContainerUltimo, Message  } from "./styled";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
 function Principal  () {
-    const[ingresar, setIngresar] = useState("")
-    const ingresaUsuario = () => {
-        setIngresar(!ingresar);
-    }
+   
+    
+    const [email, setEmail]= useState("")
+    const [password, setPassword]= useState("")
+    const [error, setError]= useState(null)
 
-    const [registrate, setRegistrate] = useState("")
-    const registroUsuario = () => {
-        setRegistrate(!registrate);
-    }
+    const Login = (ev)=>{
 
-const [body, setBody] = useState({email: "", password: ""});
-    const inputChange=({target}) =>{
-        const {email, value} = target
-        setBody({
-            ...body,
-            [email]: value
-        })
-    }
-    const validacion = (e) =>{
-        e.preventDefault()
-        Axios.post("http://localhost/users",body)
-        .then(({data})=>{
-            
-        })
-    }
+                    ev.preventDefault();
+                    setError(null);
+                    if(email && password){
+                    Axios.post("http://localhost:3005/login",{
+                    correo : email,
+                    contraseña :password
+                    })
+                    .then((response) => {
+                        console.log(response.data);
+                        if (response.data === "") {
+                        alert("el usuario no existe");
+                        } else {
+                        window.location.href = "http://localhost:3000/menu";
+                        //   history.push("/menu");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                        alert("Error en la solicitud");
+                });
+            }else{
+                    (setError(`ingrese tanto el usuario como la contraseña`))
+                }
+            }
     return(
         <Fondo>
             <Contenedor>
-                <Titulo>¡Bienvenidos a VYHON!</Titulo>
-                <Parrafo>
+                <Titulo>¡Bienvenido a VYHON!</Titulo>
+                <Message>{error}</Message>
+                
+                <Parrafo > 
                     <h4 style={{margin:"0"}}>Email</h4>
                 </Parrafo>
 
                 <Input 
                 type="email"
-                value={body.email}
-                onChange={inputChange}
+                onChange={e => setEmail(e.target.value)}
                 name="email">
                 </Input>
 
@@ -52,19 +60,18 @@ const [body, setBody] = useState({email: "", password: ""});
 
                 <Input 
                 type="Password"
-                value={body.password}
-                onChange={inputChange}
+                onChange={e => setPassword(e.target.value)}
                 name="password">
                 </Input>
 
+            <ContainerUltimo>
+
+            <Button  type="submit" onClick={Login}>Iniciar sesión</Button> <br />
+                <Olvidar href="https://www.google.com/?hl=es"><h4 style={{margin:"0"}}>Olvidaste tu contraseña?</h4></Olvidar> <br />
+                <Olvidar ><Link to={"/registrarse"}><h4 style={{margin:"0",color:"black"}}>Registrate</h4></Link></Olvidar> <br />
+            </ContainerUltimo>
                 
-                <ContainerUltimo>
-                <Link to={"/menu"} style={{width:"100%",height:"30%", display:"flex", textDecoration:"none", justifyContent:"center"}}><Button type="submit" onClick={ingresaUsuario}>Iniciar sesión</Button></Link>
-                <br />
-                <Olvidar href="https://www.google.com/?hl=es" style={{margin:"0"}}><h4 style={{margin:"0"}}>Olvidaste tu contraseña?</h4></Olvidar> 
-                <br />
-                <Olvidar onClick={registroUsuario} ><Link to={"/registrarse"} style={{color:"#101010da"}}><h4 style={{margin:"0"}}>Registrate</h4></Link></Olvidar>
-                </ContainerUltimo>
+                {/* <Button type="submit" onClick={Login}>Iniciar sesión</Button> */}
             </Contenedor>
         </Fondo>
     )

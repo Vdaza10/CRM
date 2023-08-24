@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Div1,  Container1, Caja, Parrafo, Img, Parrafo1, Caja1, Input, Parrafo2, Caja2, Boton1, Boton2 , ContactoSelect } from "./styled";
+import { Div1,  Container1, Caja, Parrafo, Img, Parrafo1, Caja1, Input,  Caja2, Boton1, Boton2 , ContactoSelect } from "./styled";
 import imagen from "../img/img_x.webp"
 
 function Retorno4() {
@@ -38,7 +38,7 @@ function Retorno4() {
                     <Input placeholder="Ingresar el email del contacto" ></Input>
                     <Parrafo1><h3>Empresa del contacto </h3></Parrafo1>
                     <ContactoSelect></ContactoSelect>
-                    <Parrafo2><h3>INFORMACION ADICIONAL</h3></Parrafo2>
+                    {/* <Parrafo2><h3>INFORMACION ADICIONAL</h3></Parrafo2> */}
                 </Caja1>
                 <hr />
                  {/* Tercera sección */}

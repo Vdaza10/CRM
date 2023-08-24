@@ -21,9 +21,9 @@ export const Contenedor = styled.div`
   justify-content: center;
   /* align-items: center; */
   width: 20%;
-  height: 50%;
+  height: 52%;
   border-radius: 15px;
-  box-shadow: 4px 4px 55px -29px rgba(0,0,0,0.77)
+  box-shadow: 4px 4px 55px -29px rgba(0,0,0,0.77);
 `;
 export const Titulo = styled.h1`
   text-align: center;
@@ -47,7 +47,8 @@ export const Input = styled.input`
 `;
 export const Olvidar = styled.a`
   /* text-decoration: none; */
-  color: #101010da;
+
+  color: #070707;
   /* font-family:'Open Sans', sans-serif; */
   font-size: 15px;
   margin-left: 15px;
@@ -55,9 +56,10 @@ export const Olvidar = styled.a`
 
 export const Button = styled.button`
   background-color: rgb(82 186 250);
+  margin-top: 7px;
   color: white;
-  width: 60%;
-  height: 90%;
+  width: 55%;
+  height: 24%;
   border: none;
   font-size: 17px;
   cursor: pointer;
@@ -74,10 +76,15 @@ export const Button = styled.button`
 
 export const ContainerUltimo = styled.div`
   width: 100%;
-  height: 30%;
+  height: 35%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
+export const Message = styled.div`
+    font-size: 10px;
+    color: red;
+    
+`

@@ -24,21 +24,20 @@ const Registrarse = () => {
 
     const Registro = (ev) => {
         ev.preventDefault()
-        if (email && password && nombre && empresa) {
-            Axios.post("http://localhost:3005/users", {
-                correo: email,
-                contraseña: password,
-                nombreUsuario: nombre,
-                nombreEmpresa: empresa
-            })
-                .then((response) => {
-                    console.log(response.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-
-                })
-        } else {
+        if(email && password && nombre && empresa){
+        Axios.post("http://localhost:3005/users",{
+        correo : email,
+        contraseña :password,
+        nombreUsuario :nombre,
+        nombreEmpresa :empresa
+        })
+        .then((response) => {
+            console.log(response.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        
+        })}else{
             alert('ingrese todos los valores')
         };
     }
@@ -53,11 +52,22 @@ const Registrarse = () => {
 
             <Contenedor1><TextoImput><h3 style={{ margin: "0" , fontWeight: "500"}}>¿ Cuál es tu nombre ?</h3></TextoImput>
                 <Input
-                    placeholder="Ingrese su  nombre"
+                placeholder="Ingrese su  nombre"
+                onChange={(event) => {
+                    setNombre(event.target.value)
+                }}
+                type="text" required></Input>
+            </Contenedor1>
+
+            <Contenedor1><TextoImput><h3 style={{ margin: "0", fontWeight: "500" }}>¿ Para que empresa trabajas  ?</h3></TextoImput>
+                <Input
+                placeholder="Ingresar nombre de la empresa "
                     onChange={(event) => {
-                        setNombre(event.target.value)
+                        setEmpresa(event.target.value)
                     }}
-                    type="text" required></Input></Contenedor1>
+                    type="text" required>
+                </Input></Contenedor1>
+
 
             <Contenedor1>
                 <TextoImput><h3 style={{ margin: "0", fontWeight: "500" }}>¿ Cuál es tu correo electrónico ?</h3></TextoImput>
@@ -74,8 +84,6 @@ const Registrarse = () => {
                 }}>{email}</span>
             </Contenedor1>
 
-
-
             <Contenedor1><TextoImput><h3 style={{ margin: "0" , fontWeight: "500" }}>Crea una contraseña para tu cuenta </h3></TextoImput>
                 <Input
                 placeholder="Ingrese su contraseña"
@@ -87,14 +95,7 @@ const Registrarse = () => {
 
 
 
-            <Contenedor1><TextoImput><h3 style={{ margin: "0", fontWeight: "500" }}>¿ Para que empresa trabajas  ?</h3></TextoImput>
-                <Input
-                placeholder="Ingresar nombre de la empresa "
-                    onChange={(event) => {
-                        setEmpresa(event.target.value)
-                    }}
-                    type="text" required>
-                </Input></Contenedor1>
+         
 
 
 

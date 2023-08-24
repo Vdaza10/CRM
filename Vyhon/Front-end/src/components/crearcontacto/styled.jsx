@@ -43,7 +43,7 @@ export const Div1 = styled.div`
 `;
 // Estilo para un contenedor principal
 export const Container1 = styled.div`
-    height: 850px;
+    height: 805px;
     width: 130%;
     background-color: white;
     border: solid 1px gray;
@@ -147,5 +147,5 @@ export const Caja2 = styled.div`
     align-items: normal;
     justify-content: space-evenly;
     align-items: center;
-    right: auto;
-`
+    right: auto;
+`;

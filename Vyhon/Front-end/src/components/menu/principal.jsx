@@ -22,7 +22,7 @@ const Menu = () => {
         setPerfilDesplegable(!perfilDesplegable); 
     };
     
-    const [busca, setBusca] = useState("")
+    // const [busca, setBusca] = useState("")
     return (
         <Contenedor >
             {/* Barra de navegación */}
@@ -49,8 +49,8 @@ const Menu = () => {
             <Buscar
                 type="search"
                 placeholder="buscar"
-                onChange={(e) => setBusca(e.target.value)}
-                />
+                // onChange={(e) => setBusca(e.target.value)}
+/>
                     <FontAwesomeIcon icon={faSearch} size="lg" style={{ color: "with" }}/>
 
                 {/* Menú desplegable de perfil de usuario */}

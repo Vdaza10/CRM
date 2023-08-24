@@ -64,10 +64,10 @@ const allOptions = [
 ];
 // Componente principal
 export  function App() {
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  // const [selectedOptions, setSelectedOptions] = useState([]);
 
   return (
-    <div className="App" style={{width:"90%",height:"5.9%", outline: "none", border: "black",fontSize:"17px",border:"solid gray 1px"}}>
+    <div className="App" style={{width:"90%",height:"5.9%", outline: "none", fontSize:"17px" ,border:"solid gray 1px"}}>
       <Select
         defaultValue={[]}
         isMulti
@@ -76,7 +76,7 @@ export  function App() {
         hideSelectedOptions={false}
         onChange={(options) => {
           if (Array.isArray(options)) {
-            setSelectedOptions(options.map((opt) => opt.value));
+            // setSelectedOptions(options.map((opt) => opt.value));
           }
         }}
         options={allOptions}
