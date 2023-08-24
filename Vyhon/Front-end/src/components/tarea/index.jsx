@@ -43,7 +43,7 @@ function Retorno5() {
                     </Caja1>
                     <Caja2>
                     <img src={imagen} alt="img" style={{width:'40%',height:'40%' }} />
-                    <Parrafo><h3>No hemos encontrado tareas en tu cuentani con los filtros <br/> que seleccionastes</h3></Parrafo>
+                    <Parrafo><h3>No hemos encontrado tareas en tu cuenta ni con los filtros <br/> que seleccionastes</h3></Parrafo>
                     <Parrafo>Crea tareas para no perder de vista las actividades y ganar mas tiempo para centrarte <br/> en lo que es más importante para tu empresa. o prueba a cambiar los filtros <br/>seleccionados para encontrar nuevos resultados.</Parrafo>
                     <Boton onClick={() => setActive(!active)}>Crear tarea</Boton>
                     {active && <CrearTarea></CrearTarea>}

@@ -138,6 +138,7 @@ export const Buscar = styled.input`
     width: 160px;
     margin-right: 5px;
     border-radius: 5px;
+    outline: none;
 `
 
 

@@ -1,93 +1,86 @@
 import styled from "styled-components" 
 
 export const Fondo = styled.div`
-    background-color: #3eabee;
+background: rgb(0,153,255);
+background: -moz-linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(238,238,238,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(238,238,238,1) 100%);
+background: linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(238,238,238,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0099ff",endColorstr="#eeeeee",GradientType=1);
     width: 100%;
     height:100vh;
-display: flex;
+    display: flex;
     justify-content: center;
     justify-content: space-between;
 `
 export const Idioma = styled.select`
-    color: #ffffff;
-    background-color: #3eabee;
-    width: 70px;
-    height: 20px;
-    cursor: pointer;
-    :hover{background-color: #030e14;}
-    border: solid 1px #3eabee;
-`
-export const Ingresar = styled.div`
-    color: #fff;
-    width: 150px;
-    height: 25px;
-cursor: pointer;
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
 `
 
 export const Ladero = styled.div`
-    background-color: #000000;
-    width: 400px;
+    background-color: rgb(255, 255, 255);
+    width: 25%;
     height:100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
 `
 export const Ladero1 = styled.div`
-    background-color: #000000;
-    width: 300px;
-    height: 230px;
-`
-export const Ladero2 = styled.div`
-    background-color: #000000;
-    color: #fff;
-    width:300px;
-    height: 230px;
+    width: 100%;
+    height: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 `
-// export const Ladero3 = styled.div`
-//     background-color: #000000;
-//     color: #fff;
-//     width: 300px;
-//     height: 230px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-// `
-
-export const Fondo2 = styled.div`
-    background-color: #3eabee;
-    width: 60%;
-    height:100vh;
+export const Ladero2 = styled.div`
+    color: black;
+    width: 80%;
+    height: 50% ;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-`
-export const Fondo3 = styled.div`
-    background-color: #3eabee;
-    width: 50%;
-    height:70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 10px;
-
 `
 
 export const Img = styled.img`
     width: 160px;
-    border-radius: 20px;
 `
-export const Imagen1 = styled.img`
-    width: 90px;
-    height: 40px;
-    border-radius: 10px;
-    margin-left: 20px;
+
+export const ContainerSelect = styled.div`
+    width: 5%;
+    height: 3%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 17px;
+
+`
+export const Ingresar = styled.p`
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight:500;
+    cursor: pointer;
+
+:hover{
+    color: white;
+} 
+`
+
+export const Parrafo = styled.p`
+    font-size: 17px;
+    font-weight: 500;
+    font-style: italic;
+    display: flex;
+    text-align: center;
+`
+export const Parrafo1 = styled.p`
+    font-size: 20px;
+    font-style: italic;
+    display: flex;
+    text-align: center;
 `

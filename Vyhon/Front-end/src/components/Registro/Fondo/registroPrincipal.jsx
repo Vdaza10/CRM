@@ -1,46 +1,46 @@
 import React from "react";
-import { Fondo, Fondo2,Fondo3, Idioma, Ingresar, Ladero, Ladero1,Img, Ladero2, Imagen1 } from "./styledRegistro";
+import { Fondo, Idioma, Ladero, Ladero1, Img, Ladero2, ContainerSelect, Ingresar , Parrafo , Parrafo1 } from "./styledRegistro";
 import Registrarse from "../Input/Registro";
-import Vyhon from"../img/vyhon.jpeg"
+import Vyhon from "../../img/logito.svg"
+import { BiWorld } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Registro = () => {
 
-    return(
+    return (
         <Fondo>
             <Ladero>
                 <Ladero1>
-                    <Imagen1 src= {Vyhon} alt="" />
-                    
                 </Ladero1>
 
                 <Ladero2>
-                    <h2>crea tu cuenta en Vyhon CRM</h2>
-                    <p>crea con nosotros tu cuenta, ten una nueva y buena manera de agilizar sus procesos, mejorar su rentabilidad y sobre todo mantenerse en contacto con los clientes . 
-                        siempre de su lado. Vyhon
-                    </p>
+                    <Parrafo><h2 style={{margin:"0"}}>crea tu cuenta en Vyhon CRM</h2></Parrafo>
+                    <Parrafo1>Únete a nosotros y crea tu cuenta para disfrutar  de una nueva y efectiva  forma de agilizar tus procesos, mejorar la rentabilidad  de tu negocio y, lo  más  importante,  mantener una comunicación  constante con tus clientes. En  Vyhon, estamos comprometidos contigo en cada paso del camino, brindándote soluciones  que te respaldan siempre. ¡Únete a nuestra comunidad y descubre cómo podemos ayudarte a alcanzar tus objetivos!</Parrafo1>
                 </Ladero2>
-                <Ladero2>
+                <Ladero1>
                     <Img src={Vyhon} alt="" />
-                    <p>EL CRM DE VENTAS , MAS VISITADO DE TODO El MERCADO</p>
-                </Ladero2>
-            
+                    <Parrafo> ¡Eleva tu eficiencia a un nuevo nivel con Vyhon CRM! </Parrafo>
+                </Ladero1>
+
             </Ladero>
-            
-            <Fondo2>
-                <Fondo3>
+
+            {/* <Fondo3> */}
                 <Registrarse></Registrarse>
-                </Fondo3>
-            </Fondo2>
-            <Idioma name="idioma"> 
-            <option value="spañol">spañol</option>
-            <option value="ingles">ingles</option>
-            <option value="portugal">portugal</option>
-            <option value="brasil">brasil</option>
-            <option value="germany">germany</option>
-            <option value="arabe">arabe</option>
-            </Idioma>
-            <Ingresar>ingresa a tu cuenta</Ingresar>
+            {/* </Fondo3> */}
+            <ContainerSelect>
+                <BiWorld></BiWorld>
+                <Idioma name="idioma">
+                    <option value="spañol">spañol</option>
+                    <option value="ingles">ingles</option>
+                    <option value="portugal">portugal</option>
+                    <option value="brasil">brasil</option>
+                    <option value="germany">germany</option>
+                    <option value="arabe">arabe</option>
+                </Idioma>
+            </ContainerSelect>
+            {/* <p style={{marginRight:"10px"}}></p> */}
+            <Link to={"/"} style={{textDecoration:"none", color:"black"}}><Ingresar>Ingres a tu cuenta</Ingresar></Link>
         </Fondo>
     )
 }
-export default Registro
+export default Registro

@@ -63,7 +63,7 @@ const [body, setBody] = useState({email: "", password: ""});
                 <br />
                 <Olvidar href="https://www.google.com/?hl=es" style={{margin:"0"}}><h4 style={{margin:"0"}}>Olvidaste tu contraseña?</h4></Olvidar> 
                 <br />
-                <Olvidar onClick={registroUsuario} ><Link to={"/registrarse"} style={{color:"#0099ff99"}}><h4 style={{margin:"0"}}>Registrate</h4></Link></Olvidar>
+                <Olvidar onClick={registroUsuario} ><Link to={"/registrarse"} style={{color:"#101010da"}}><h4 style={{margin:"0"}}>Registrate</h4></Link></Olvidar>
                 </ContainerUltimo>
             </Contenedor>
         </Fondo>
