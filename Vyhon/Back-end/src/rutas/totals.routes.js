@@ -21,13 +21,29 @@ router.delete('/users', userCrtl.deleteUsers);
 
 //Login
 
-router.post('/login',  logincrtl.Login)
+router.post('/login',  logincrtl.Login);
 
 //empresa//
+router.post('/company', empresaCrtl.createEmpresa);
 
+router.get('/company', empresaCrtl.getEmpresas);
+
+router.get('/company/:id', empresaCrtl.getEmpresaId);
+
+router.patch('/company/:id', empresaCrtl.updateEmpresas)
+
+router.delete('/company/:id', empresaCrtl.deleteEmpresas);
 
 //contacto//
+router.post('/contacto', contactoCrtl.crearContacto)
 
+router.get('/contacto', contactoCrtl.getContacto);
+
+router.get('/contacto/:id', contactoCrtl.getContactoId);
+
+router.patch('/contacto/:id', contactoCrtl.updateContacto);
+
+router.delete('/contacto/:id', contactoCrtl.deleteContacto);
 
 //negocio//
 
@@ -38,5 +54,12 @@ router.post('/login',  logincrtl.Login)
 //tareas//
 
 
+router.get('/Tareas', tareaCrtl.getTareas);
+
+router.post('/tareas', tareaCrtl.createTarea);
+
+router.patch('/tareas', tareaCrtl.updateTarea);
+
+router.delete('/tareas', tareaCrtl.deleteTarea);
 
 export default router
