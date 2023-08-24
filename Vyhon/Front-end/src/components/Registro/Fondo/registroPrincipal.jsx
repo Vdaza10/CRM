@@ -23,7 +23,6 @@ const Registro = () => {
                 </Ladero1>
 
             </Ladero>
-
             {/* <Fondo3> */}
                 <Registrarse></Registrarse>
             {/* </Fondo3> */}
@@ -43,4 +42,4 @@ const Registro = () => {
         </Fondo>
     )
 }
-export default Registro
+export default Registro
