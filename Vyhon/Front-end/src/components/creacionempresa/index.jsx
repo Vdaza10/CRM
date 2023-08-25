@@ -4,6 +4,8 @@ import imagen from "../img/img_x.webp"
 
 
 function Retorno8() {
+
+
     const [cerrar, setCerrar] = useState(true); // Estado para controlar la visibilidad del componente Retorno8
     
     // Función para cerrar el componente al hacer clic en la imagen
@@ -40,9 +42,6 @@ function Retorno8() {
                     <Caja2>
                         <Boton2>Cancelar</Boton2>
                         <Boton1 >Crear empresa</Boton1>
-
-                    
-
                     </Caja2>
                 </Container1> 
             </Div1>

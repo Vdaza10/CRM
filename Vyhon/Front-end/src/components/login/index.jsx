@@ -1,62 +1,77 @@
 import React, { useState } from "react";
-import { Fondo,Contenedor,Titulo,Parrafo,Input, Button, Olvidar } from "./styled";
+import { Fondo,Contenedor,Titulo,Parrafo,Input, Button, Olvidar , ContainerUltimo, Message  } from "./styled";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
 function Principal  () {
-    const[ingresar, setIngresar] = useState("")
-    const ingresaUsuario = () => {
-        setIngresar(!ingresar);
-    }
+   
+    
+    const [email, setEmail]= useState("")
+    const [password, setPassword]= useState("")
+    const [error, setError]= useState(null)
 
-    const [registrate, setRegistrate] = useState("")
-    const registroUsuario = () => {
-        setRegistrate(!registrate);
-    }
+    const Login = (ev)=>{
 
-const [body, setBody] = useState({email: "", password: ""});
-    const inputChange=({target}) =>{
-        const {email, value} = target
-        setBody({
-            ...body,
-            [email]: value
-        })
-    }
-    const validacion = (e) =>{
-        e.preventDefault()
-        Axios.post("http://localhost/users",body)
-        .then(({data})=>{
-            
-        })
-    }
+                    ev.preventDefault();
+                    setError(null);
+                    if(email && password){
+                    Axios.post("http://localhost:3005/login",{
+                    correo : email,
+                    contraseña :password
+                    })
+                    .then((response) => {
+                        console.log(response.data);
+                        if (response.data === "") {
+                        alert("el usuario no existe");
+                        } else {
+                        window.location.href = "http://localhost:3000/menu";
+                        //   history.push("/menu");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                        alert("Error en la solicitud");
+                });
+            }else{
+                    (setError(`ingrese tanto el usuario como la contraseña`))
+                }
+            }
     return(
         <Fondo>
             <Contenedor>
-                <Titulo>Login</Titulo>
-                <Parrafo>Correo: <br />
+                <Titulo>¡Bienvenido a VYHON!</Titulo>
+                <Message>{error}</Message>
+                
+                <Parrafo > 
+                    <h4 style={{margin:"0"}}>Email</h4>
+                </Parrafo>
 
                 <Input 
                 type="email"
-                value={body.email}
-                onChange={inputChange}
+                onChange={e => setEmail(e.target.value)}
                 name="email">
                 </Input>
 
+                
+                <Parrafo>
+                    <h4 style={{margin:"0"}}>Contraseña</h4>
                 </Parrafo>
-                <Parrafo>Contraseña:<br/>
+                
 
                 <Input 
                 type="Password"
-                value={body.password}
-                onChange={inputChange}
+                onChange={e => setPassword(e.target.value)}
                 name="password">
                 </Input>
 
-                </Parrafo>
-                <Olvidar href="https://www.google.com/?hl=es">Olvidaste tu contraseña?</Olvidar> <br />
-                <Olvidar onClick={registroUsuario} ><Link to={"/registrarse"} style={{color:"aqua"}}>Registrate</Link></Olvidar> <br />
+            <ContainerUltimo>
+
+            <Button  type="submit" onClick={Login}>Iniciar sesión</Button> <br />
+                <Olvidar href="https://www.google.com/?hl=es"><h4 style={{margin:"0"}}>Olvidaste tu contraseña?</h4></Olvidar> <br />
+                <Olvidar ><Link to={"/registrarse"}><h4 style={{margin:"0",color:"black"}}>Registrate</h4></Link></Olvidar> <br />
+            </ContainerUltimo>
                 
-                <Button type="submit" onClick={ingresaUsuario}><Link to={"/menu"} style={{textDecoration:"none",color:"black"}}>Iniciar sesión</Link></Button>
+                {/* <Button type="submit" onClick={Login}>Iniciar sesión</Button> */}
             </Contenedor>
         </Fondo>
     )

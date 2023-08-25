@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { DivContainer, Container, Caja1, Caja2, Caja3, Caja4,Cajita } from "./styled";
+import { DivContainer, Container, Caja1, Caja2, Caja3, Caja4, Cajita } from "./styled";
 import imagen from "../img/img1.png" 
 import { Link } from "react-router-dom";
 

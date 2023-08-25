@@ -1,84 +1,105 @@
 import styled from "styled-components";
 
 export const Contenedor = styled.div`
-    background-color: #3eabee;
-    width: 60%;
-    height: 70%;
+    width: 50%;
+    height: 90%;
     display: flex;
+    align-items: end;
+    justify-content: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 10px;
-    text-align: center;
-    border: solid 2px #2096cc;
+    margin-top: 40px;
 `
-export const Titulo = styled.div`
-background-color: #3eabee;
-    color: #fff;
-    width: 250px;
-    height: 25px;
+
+export const Contenedor2 = styled.div`
+    width: 50%;
+    height: 70%;
+    margin-right: 8%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    /* margin-top: 40px; */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 55px -29px rgba(0,0,0,0.77);
 `
-export const Subtitulo = styled.div`
-    background-color: #3eabee;
-    width: 160px ;
-    font-size: 12px;
-    color: #fffffc;
-    text-align: center;
-    
+
+export const Titulo = styled.div`
+    width: 100%;
+    height: 10%;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
+
 export const Contenedor1 = styled.div`
-    background-color: #3eabee;
-    width: 260px;
-    height: 50px;
+    /* background-color: #3eee61; */
+    margin-top: 10px;
+    width:75% ;
+    height: 15%;
 `
 export const Input = styled.input`
-    background-color: #ffffff;
-    border-radius: 6px;
-    width: 200px;
-    height: 25px;
-    border: solid 2px;
-    color: #000000;
+    border-radius: 3px;
+    width: 100%;
+    height: 50%;
+    margin-top: 8px;
+    font-size: 16px;
+    border: none;
+    background-color: #0ba0e63c;
+    /* outline: none; */
+    padding-left: 8px;
 `
 
 
 export const Boton = styled.button`
-    background-color: #d8dde0;
-    color: #3387b8;
-    width: 100px;
-    height: 20px;
-    border-radius: 7px;
-    border: solid 2px;
+    background-color: #3aa8ec ;
+    color: #eee;
+    border: none;
+    width: 60%;
+    height: 40%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+
     :hover{
-        background-color: #020107;
+        background-color: #eee;
+        color: #222;
+        border: 1px solid #000;
     } 
 `
 export const Checkbox = styled.div`
-    background-color: #3eabee;
-    width: 260px;
-    height: 47px;
+    width: 75%;
+    height: 10%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
 `
-export const ContenedorLetraSeleccionar = styled.div`
-    background-color: #3eabee;
-    width: 170px ;
-    height: 47px;
-    font-size: 12px;
-    color: #fffffc;
-    text-align: center;
+
+export const TextoCheckbox = styled.p`
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 500;
 `
-export const CuadritoSelecionar = styled.div`
-    background-color: #3eabee;
-    width: 20px;
-    height: 18px;
-`
+
 export const Seleccionar = styled.input`
     cursor: pointer;
+    width: 20px;
+    height: 20px;
+`
+export const TextoImput = styled.p`
+    font-size: 15px;
+    color: #000000;
+    margin: 0;
+`;
+
+export const ContaienrBoton = styled.div`
+    width: 70%;
+    height: 20%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
 `

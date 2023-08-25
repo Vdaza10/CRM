@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Div1, Container1, Caja, Parrafo, Img, Parrafo1, Caja1, Input, Parrafo2, Caja2, Boton1, Boton2 , ContactoSelect } from "./styled";
+import { Div1,  Container1, Caja, Parrafo, Img, Parrafo1, Caja1, Input,  Caja2, Boton1, Boton2 , ContactoSelect } from "./styled";
 import imagen from "../img/img_x.webp"
 import axios from "axios";
 import Validator  from "validator";
@@ -84,7 +84,7 @@ const datosIngresados = (e) => {
                     ></Input>
                     <Parrafo1 onChange= {(event)=>{setEmpresaContacto(event.target.value)}}><h3>Empresa del contacto </h3></Parrafo1>
                     <ContactoSelect></ContactoSelect>
-                    <Parrafo2><h3>INFORMACION ADICIONAL</h3></Parrafo2>
+                    {/* <Parrafo2><h3>INFORMACION ADICIONAL</h3></Parrafo2> */}
                 </Caja1>
                 <hr />
                  {/* Tercera sección */}

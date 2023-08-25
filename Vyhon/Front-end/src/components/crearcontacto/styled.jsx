@@ -11,12 +11,13 @@ const options = [
 
 // Componente para el Select
 export const ContactoSelect = () => (
-    <Select
+        <Select
         placeholder="Seleccionar"
         options={options}
         styles={{
             control: (provided) => ({
                 ...provided,
+                border:'solid 1px gray',
                 width: '92%', // Cambia la altura según tus necesidades
                 // Otras propiedades de estilo
             }),
@@ -38,13 +39,13 @@ export const Div1 = styled.div`
     position: absolute;
     height: 70vh;
     right: 80px; //separacion
-    background-color: white;
     
 `;
 // Estilo para un contenedor principal
 export const Container1 = styled.div`
-    height: 850px;
+    height: 805px;
     width: 130%;
+    background-color: white;
     border: solid 1px gray;
     
 `
@@ -99,15 +100,16 @@ export const Parrafo2 = styled.p`
 export const Boton1 = styled.button`
     background-color: #49a3db;
     color: white;
-    width: 30%;
-    height: 40%;
+    width: 35%;
+    height: 45%;
     border: none;
     border-radius: 2px;
-    font-size: 12px; 
+    font-size: 14px; 
     cursor: pointer;
 
     &:hover {
         background-color: #3eabee76;
+        color: black;
     }
 
     &:focus {
@@ -120,14 +122,15 @@ export const Boton2 = styled.button`
     background-color: white;
     scroll-padding-right: none;
     color: #49a3db;
-    width: 20%;
-    height: 40%;
-    font-size: 12px; 
-    border: solid 1px gray;
+    width: 25%;
+    height: 45%;
+    font-size: 14px; 
+    border: solid 1px #80808044;
     cursor: pointer;
 
     &:hover {
         background-color: #3eabee76;
+        color: gray;
     }
 
     &:focus {
@@ -145,4 +148,4 @@ export const Caja2 = styled.div`
     justify-content: space-evenly;
     align-items: center;
     right: auto;
-`
+`;

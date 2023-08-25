@@ -132,6 +132,14 @@ export const Menudesplegable = styled.div`
     background-color: white;
 `
 
+export const Buscar = styled.input`
+    /* background-color: #3022ee; */
+    height: 30px;
+    width: 160px;
+    margin-right: 5px;
+    border-radius: 5px;
+    outline: none;
+`
 
 
 

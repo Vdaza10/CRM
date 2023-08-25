@@ -64,10 +64,10 @@ const allOptions = [
 ];
 // Componente principal
 export  function App() {
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  // const [selectedOptions, setSelectedOptions] = useState([]);
 
   return (
-    <div className="App" style={{width:"90%", outline: "none", border: "black"}}>
+    <div className="App" style={{width:"90%",height:"5.9%", outline: "none", fontSize:"17px" ,border:"solid gray 1px"}}>
       <Select
         defaultValue={[]}
         isMulti
@@ -76,7 +76,7 @@ export  function App() {
         hideSelectedOptions={false}
         onChange={(options) => {
           if (Array.isArray(options)) {
-            setSelectedOptions(options.map((opt) => opt.value));
+            // setSelectedOptions(options.map((opt) => opt.value));
           }
         }}
         options={allOptions}
@@ -103,6 +103,7 @@ export const Div1 = styled.div`
     right: 0;
     height: 89vh;
     width: 37vh;
+    background-color: white;
 `;
 // Estilo para el contenedor que envuelve el contenido principal
 export const Container1 = styled.div`
@@ -145,9 +146,9 @@ export const Caja1 = styled.div`
 `
 // Estilo para el input
 export const Input = styled.input`
-    height: 5%;
+    height: 5.5%;
     width: 90%;
-    font-size: 14px;
+    font-size: 17px;
 `
 // Estilo para el área de texto
 export const Area = styled.textarea`
@@ -159,14 +160,15 @@ export const Area = styled.textarea`
 export const Boton1 = styled.button`
     background-color: #49a3db;
     color: white;
-    width: 30%;
+    width: 35%;
     height: 40%;
     border: none;
     border-radius: 2px;
-    font-size: 14px; 
+    font-size: 15px; 
     cursor: pointer;
     &:hover {
         background-color: #3eabee76;
+        color: black;
     }
     &:focus {
         outline: none;
@@ -177,14 +179,15 @@ export const Boton1 = styled.button`
 export const Boton2 = styled.button`
     background-color: white;
     color: #49a3db;
-    width: 20%;
+    width: 25%;
     height: 40%;
-    font-size: 14px; 
+    font-size: 15px; 
     border: solid 1px gray;
     cursor: pointer;
 
     &:hover {
         background-color: #3eabee76;
+        color: gray;
     }
 
     &:focus {
