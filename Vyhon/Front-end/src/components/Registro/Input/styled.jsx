@@ -9,6 +9,20 @@ export const Contenedor = styled.div`
     flex-direction: column;
     margin-top: 40px;
 `
+
+export const Contenedor2 = styled.div`
+    width: 50%;
+    height: 70%;
+    margin-right: 8%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 40px; */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 55px -29px rgba(0,0,0,0.77);
+`
+
 export const Titulo = styled.div`
     width: 100%;
     height: 10%;
@@ -22,47 +36,53 @@ export const Titulo = styled.div`
 export const Contenedor1 = styled.div`
     /* background-color: #3eee61; */
     margin-top: 10px;
-    width:50% ;
-    height: 10%;
+    width:75% ;
+    height: 15%;
 `
 export const Input = styled.input`
-    border-radius: 2px;
-    width: 80%;
-    height: 45%;
-    border: solid 2px black;
+    border-radius: 3px;
+    width: 100%;
+    height: 50%;
     margin-top: 8px;
     font-size: 16px;
+    border: none;
+    background-color: #0ba0e63c;
+    /* outline: none; */
+    padding-left: 8px;
 `
 
 
 export const Boton = styled.button`
-    background-color: #020107 ;
-    color: white;
+    background-color: #3aa8ec ;
+    color: #eee;
     border: none;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
 
     :hover{
-        background-color: #3aa8ec;
-        color: gray;
+        background-color: #eee;
+        color: #222;
+        border: 1px solid #000;
     } 
 `
 export const Checkbox = styled.div`
-    width: 50%;
-    height: 5%;
-    margin-top: 20px;
+    width: 75%;
+    height: 10%;
     display: flex;
     align-items: center;
+    padding-right: 5px;
 `
 
 export const TextoCheckbox = styled.p`
-    font-size: 12px;
+    font-size: 11px;
     font-style: italic;
+    font-weight: 500;
 `
 
 export const Seleccionar = styled.input`
@@ -72,16 +92,14 @@ export const Seleccionar = styled.input`
 `
 export const TextoImput = styled.p`
     font-size: 15px;
-    font-style: italic;
+    color: #000000;
     margin: 0;
-    color: #0000009c;
-`
+`;
 
 export const ContaienrBoton = styled.div`
-    width: 40%;
-    height: 10%;
-    margin-top: 30px;
+    width: 70%;
+    height: 20%;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
-    margin-right: 9%;
 `

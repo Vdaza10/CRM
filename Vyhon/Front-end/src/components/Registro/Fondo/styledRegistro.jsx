@@ -6,6 +6,7 @@ background: -moz-linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(238,238,238,
 background: -webkit-linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(238,238,238,1) 100%);
 background: linear-gradient(180deg, rgba(0,153,255,1) 0%, rgba(238,238,238,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0099ff",endColorstr="#eeeeee",GradientType=1);
+
     width: 100%;
     height:100vh;
     display: flex;
@@ -22,7 +23,7 @@ export const Idioma = styled.select`
 `
 
 export const Ladero = styled.div`
-    background-color: rgb(255, 255, 255);
+background-color: white;
     width: 25%;
     height:100vh;
     display: flex;
@@ -66,9 +67,27 @@ export const Ingresar = styled.p`
     font-weight:500;
     cursor: pointer;
 
-:hover{
-    color: white;
-} 
+    /* &:before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background-color: #1e1e1e;
+        border-radius: 40px;
+        transition: width 0.2s ease-in-out;
+        
+    }
+
+    &:hover:before {
+        width: 5%;
+        
+    } */
+
+    &:hover {
+        color: #c6dde7;
+    }
 `
 
 export const Parrafo = styled.p`
@@ -82,5 +101,5 @@ export const Parrafo1 = styled.p`
     font-size: 20px;
     font-style: italic;
     display: flex;
-    text-align: center;
+    text-align: center;
 `

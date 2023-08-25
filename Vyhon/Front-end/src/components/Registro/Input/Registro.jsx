@@ -1,5 +1,5 @@
 import React from "react";
-import { Contenedor, Input, Boton, Seleccionar, Contenedor1, Checkbox, Titulo,  TextoImput, TextoCheckbox, ContaienrBoton } from "./styled";
+import { Contenedor, Input, Boton, Seleccionar, Contenedor1, Checkbox, Titulo,  TextoImput, TextoCheckbox, ContaienrBoton, Contenedor2 } from "./styled";
 import { useState } from "react";
 import Axios from "axios";
 import validator from 'validator'
@@ -44,13 +44,13 @@ const Registrarse = () => {
 
     return (
         <Contenedor>
+            <Contenedor2>
             <Titulo>
-                <h2 style={{ marginLeft: "40%" }}>Crea tu cuenta</h2>
+                <h2 style={{ fontWeight: "500", fontStyle:"italic"}}>Registrate en Vyhon</h2>
             </Titulo>
 
 
-
-            <Contenedor1><TextoImput><h3 style={{ margin: "0" , fontWeight: "500"}}>¿ Cuál es tu nombre ?</h3></TextoImput>
+            <Contenedor1 style={{marginTop:"20px"}}><TextoImput><h3 style={{ margin: "0", fontWeight: "500" }}>¿Cuál es tu nombre?</h3></TextoImput>
                 <Input
                 placeholder="Ingrese su  nombre"
                 onChange={(event) => {
@@ -69,10 +69,20 @@ const Registrarse = () => {
                 </Input></Contenedor1>
 
 
-            <Contenedor1>
-                <TextoImput><h3 style={{ margin: "0", fontWeight: "500" }}>¿ Cuál es tu correo electrónico ?</h3></TextoImput>
+
+
+<Contenedor1><TextoImput><h3 style={{ margin: "0", fontWeight: "500"  }}>¿Para que empresa trabajas?</h3></TextoImput>
                 <Input
-                    placeholder="Ingrese su correo electronico"
+                // placeholder="Ingresar nombre de la empresa "
+                    onChange={(event) => {
+                        setEmpresa(event.target.value)
+                    }}
+                    type="text" required>
+                </Input></Contenedor1>
+            <Contenedor1>
+                <TextoImput><h3 style={{ margin: "0" , fontWeight: "500" }}>¿Cuál es tu correo electrónico?</h3></TextoImput>
+                <Input
+                    // placeholder="Ingrese su correo electronico"
                     onChange={(e) => Validacion(e)}
                     type="email"
                     // placeholder ="ejemplo@kmas.com"
@@ -86,30 +96,22 @@ const Registrarse = () => {
 
             <Contenedor1><TextoImput><h3 style={{ margin: "0" , fontWeight: "500" }}>Crea una contraseña para tu cuenta </h3></TextoImput>
                 <Input
-                placeholder="Ingrese su contraseña"
+                // placeholder="Ingrese su contraseña"
                     onChange={(event) => {
                         setPassword(event.target.value)
                     }}
                     type="password" required></Input></Contenedor1>
-
-
-
-
-         
-
-
-
-
             <Checkbox>
                 <Seleccionar type="checkbox"></Seleccionar>
-                <TextoCheckbox>Estoy deacuerdo con los terminos de uso del software y conozco <br /> la polica  de privacidad </TextoCheckbox>
+                <TextoCheckbox>Estoy deacuerdo con los terminos de uso del software y conozco <br />la polica  de privacidad</TextoCheckbox>
             </Checkbox>
 
             <ContaienrBoton>
                 <Boton
-                    onClick={Registro}>crear cuenta
+                    onClick={Registro}>Crear cuenta
                 </Boton>
             </ContaienrBoton>
+            </Contenedor2>
         </Contenedor>
 
     )
