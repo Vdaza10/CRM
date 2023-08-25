@@ -23,7 +23,6 @@ const Registro = () => {
                 </Ladero1>
 
             </Ladero>
-
             {/* <Fondo3> */}
                 <Registrarse></Registrarse>
             {/* </Fondo3> */}

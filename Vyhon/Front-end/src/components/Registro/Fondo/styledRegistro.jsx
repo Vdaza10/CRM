@@ -23,7 +23,7 @@ export const Idioma = styled.select`
 `
 
 export const Ladero = styled.div`
-background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 25%;
     height:100vh;
     display: flex;
@@ -101,5 +101,5 @@ export const Parrafo1 = styled.p`
     font-size: 20px;
     font-style: italic;
     display: flex;
-    text-align: center;
+    text-align: center;
 `

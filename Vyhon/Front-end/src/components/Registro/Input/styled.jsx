@@ -86,7 +86,7 @@ export const TextoCheckbox = styled.p`
 `
 
 export const Seleccionar = styled.input`
-    cursor: pointer;
+    cursor: pointer;
     width: 20px;
     height: 20px;
 `
