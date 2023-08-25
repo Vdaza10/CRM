@@ -6,6 +6,7 @@ import { FaUser } from "react-icons/fa";
 
 
 function CrearTarea() {
+    
     const [cerrar, setCerrar] = useState(true);
     const cerrarcomponente = () => {
         setCerrar(false);
@@ -26,7 +27,7 @@ function CrearTarea() {
                         <Parrafo1><h3>Negocio</h3></Parrafo1>
                         <ContactoSelect></ContactoSelect>
                         <Parrafo1><h3>Asunto de la tarea</h3></Parrafo1>
-                        <Input placeholder="ingresar asunto de tarea"></Input>
+                        <Input placeholder="ingresar asunto de tarea" ></Input>
                         <Parrafo1><h3>Responsable</h3></Parrafo1>
                         <ContainerInput>
                         <Input placeholder="Ingresar nombre del responsable" style={{color:'gray',height:"90%",width:"90%", border:"none"}} ></Input>
@@ -51,6 +52,6 @@ function CrearTarea() {
             </Container>
         </div>
     );
-}
+} 
 
 export default CrearTarea;

@@ -9,7 +9,7 @@ import * as tareaCrtl from "../controladores/tarea.js"; //tareas// */
 
 
 //registro
-const router = Router();
+export const router = Router();
 
 router.get('/users', userCrtl.getUsers);
 
@@ -36,4 +36,3 @@ router.delete('/users', userCrtl.deleteUsers);
 
 
 
-export default router

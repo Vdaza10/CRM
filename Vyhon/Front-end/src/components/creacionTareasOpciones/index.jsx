@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Container, Input, ContainerInput, Parrafo, Conteiner1, Conteiner2, Checkbox, Caja, ParrafoCheckbox, Boton1, Boton2 } from "./styled";
 import { BsSearch } from 'react-icons/bs';
 
