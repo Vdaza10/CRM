@@ -33,24 +33,24 @@ const Registrarse = () => {
     };
 
     const Registro = (ev) => {
-        ev.preventDefault();
-        if (email && password && nombre && empresa) {
-            Axios.post("http://localhost:3005/users", {
-                correo: email,
-                contraseña: password,
-                nombreUsuario: nombre,
-                nombreEmpresa: empresa,
+        ev.preventDefault()
+        if(email && password && nombre && empresa){
+            Axios.post("http://localhost:3005/users",{
+            correo : email,
+            contraseña :password,
+            nombreUsuario :nombre,
+            nombreEmpresa :empresa
             })
-                .then((response) => {
-                    console.log(response.data);
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        } else {
-            alert("ingrese todos los valores");
-        }
-    };
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            
+            })}else{
+                alert('ingrese todos los valores')
+            };
+    }
 
     return (
         <Contenedor>

@@ -13,7 +13,12 @@ export const createTarea = async(req,res) =>{
         const  {negocio, asunto, responsable, tipoTarea, fecha, hora} = req.body;
         const [rows] = await pool.query(
             'INSERT INTO tarea (negocio, asunto, responsable, tipoTarea, fecha, hora) VALUES (?,?,?,?,?,?)',
-            [nombreUsuario, nombreEmpresa, correo, contraseña])
+            [negocio, 
+            asunto, 
+            responsable, 
+            tipoTarea,
+            fecha, 
+            hora])
 
         res.send({
             id:rows.insertId,
@@ -28,25 +33,31 @@ export const createTarea = async(req,res) =>{
         return res.status(500).json({message: 'Algo va mal'})
     }
 }
-
 export const updateTarea= async (req, res) => {
     try {
-    
+        const updateData = await pool.query(
+            'UPDATE tarea SET nombreEmpresa=?, segmento=?, url=?, descripcion=? WHERE idEmpresa = ?',
+            [nombreEmpresa, segmento, url, descripcion, req.params.id]
+        )
     } catch (error) {
         return res.send(404).json({
     message: `The register can't been update`,
         });
     }
-    };
+};
     
 
-    export const deleteTarea = async (req, res) => {
+export const deleteTarea = async (req, res) => {
     try {
+        const deletedata = await pool.query('DELETE FROM tarea WHERE idTarea = ?',
+        [req.params.id])
     } catch (error) {
         return res.status(404).json({
         message: "Register in database was not delete",
         });
     }
-    };
+};
+
+
     
 

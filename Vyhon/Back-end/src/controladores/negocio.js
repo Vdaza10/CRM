@@ -1,51 +1,78 @@
 import { pool } from "../db.js";
-
-export const getNegocio = async(req,res) =>{
+export const crearNegocio = async (req, res) => {
     try {
-        const [rows] = await pool.query('SELECT nombreNegocio ,etapas ,fuente , empresa ,contacto  FROM negocio INNER JOIN contacto ON negocio.contacto = contacto.idContacto INNER JOIN empresa ON negocio.empresa = empresa.idEmpresa ');
-        res.json(rows[0])
-
-    } catch (error) {
-        return res.status(500).json({message: 'Algo va mal'})
-    }
-}
-
-export const createNegocio = async(req,res) =>{
-    try {
-        const  {nombreNegocio ,etapas ,fuente , empresa , contacto} = req.body;
+        const {nombreNegocio, etapas, fuente, empresa, contacto} = req.body;
         const [rows] = await pool.query(
-            'INSERT INTO negocio( nombreNegocio, etapas, fuente, empresa ,contacto) VALUES (?,?,?,?,?)',
-            [nombreNegocio, etapas, fuente, empresa , contacto])
-
+            "INSERT INTO negocio (nombreNegocio, etapas, fuente, empresa, contacto) VALUES (?,?,?,?,?)",
+            [nombreNegocio, etapas, fuente, empresa, contacto]
+        );
+        console.log(rows);
         res.send({
-            id:rows.insertId,
-            nombreNegocio,
-            etapas,
-            fuente,
-            empresa,
+            id: rows.insertId,
+            nombreNegocio, 
+            etapas, 
+            fuente, 
+            empresa, 
             contacto
-        })
+        });
+        
     } catch (error) {
-        return res.status(500).json({message: 'Algo va mal'})
+        console.error(error);
+        return res.status(500).json({ message: "Algo anda mal" });
     }
-}
+};
+
+
+
+export const getNegocio = async (req, res) => {
+    try {
+        const [rows] = await pool.query('SELECT * FROM Negocio')
+
+        res.json(rows)
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: "Algo anda mal" });
+    }
+};
+
+
+
+export const getNegocioId = async (req, res) => {
+    const idNegocio = req.params.id;
+    try {
+        const [row] = await pool.query('SELECT * FROM negocio WHERE idNegocio = ?', [idNegocio]);
+
+        res.json(row);
+    } catch (error) {
+        res.status(500).json({ error: 'Error obteniendo segmento por ID' });
+    }
+};
+
+
 
 export const updateNegocio = async (req, res) => {
     try {
-    
-    } catch (error) {
-        return res.send(404).json({
-    message: `The register can't been update`,
-        });
-    }
-    };
+        const {nombreNegocio, etapas, fuente, empresa, contacto} = req.body;
 
-    
-    export const deleteNegocio = async (req, res) => {
-    try {
+        const updateData = await pool.query(
+            'UPDATE empresa SET nombreNegocio = ?, etapas = ?, fuentes = ?, empresa = ?, contacto = ?, WHERE idNegocio = ?',
+            [nombreNegocio, etapas, fuente, empresa, contacto, req.params.id]
+        );
+            res.json(updateData)
+        res.status(200).json({ message: 'A company has been updated' });
     } catch (error) {
-        return res.status(404).json({
-        message: "Register in database was not delete",
-        });
+        console.error(error);
+        res.status(500).json({ message: 'An error was detected' });
     }
-    };
+};
+
+
+export const deleteNegocio = async (req, res) => {
+    try {
+        const deletedata = await pool.query('DELETE FROM negocio WHERE idNegocio = ?',
+        [req.params.id]);
+        res.status(200).json({ message: 'Empresa eliminada correctamente' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error al eliminar la empresa' });
+    }
+};

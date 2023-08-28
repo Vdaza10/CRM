@@ -2,7 +2,7 @@ import { pool } from "../db.js";
 
 export const getUsers = async(req,res) =>{
     try {
-        const [rows] = await pool.query('SELECT correo, contraseña FROM registro');
+        const [rows] = await pool.query('SELECT correo FROM registro');
         res.json(rows[0])
 
     } catch (error) {
@@ -14,9 +14,19 @@ export const getUsers = async(req,res) =>{
 export const createUsers = async(req,res) =>{
     try {
         const  {nombreUsuario, nombreEmpresa, correo, contraseña} = req.body;
+
+        const existe = 'SELECT * FROM registro where correo = ? '
+        const evaluar = [correo];
+        const [resultado] =await pool.query(existe,evaluar);
+
+        if(resultado.length > 0){
+            return res.send("El usuario ya esta registrado");
+        }
+
         const [rows] = await pool.query(
             'INSERT INTO registro (nombreUsuario, nombreEmpresa, correo, contraseña) VALUES (?,?,?,?)',
             [nombreUsuario, nombreEmpresa, correo, contraseña])
+
 
         res.send({
             id:rows.insertId,
