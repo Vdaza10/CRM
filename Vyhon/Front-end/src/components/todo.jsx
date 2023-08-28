@@ -12,6 +12,9 @@ import Retorno9 from "./integracionMarkenting"
 import CrearTarea from "./CreacionTarea"
 import Principal from "./login"
 import Registro from "./Registro/Fondo/registroPrincipal"
+import Recuperar from "./recuperarContraseña"
+import VentanaModal1 from "./mensajeRegistro"
+import VentanaModal2 from "./mensajeContraseña"
 
 const Todo = () => {
     return(
@@ -19,6 +22,7 @@ const Todo = () => {
             <Routes>
                 {/* Rutas para el menu principal */}
                 <Route path="/" element = {<Principal/>}> </Route>
+                <Route path="/recuperar" element = {<Recuperar/>}> </Route>
                 <Route path="/menu" element = {<Menu/>}> </Route>
                 <Route path="/registrarse" element = {<Registro/>}> </Route>
                 {/* Rutas para diferentes sesiones */}
@@ -31,6 +35,8 @@ const Todo = () => {
                 <Route path="/perfilusuario" element = {<PerfilUsuario/>}></Route>
                 <Route path="/markenting" element = {<Retorno9/>}></Route>
                 <Route path="/creartarea" element = {<CrearTarea/>}></Route>
+                <Route path="/ventanaModal1" element = {<VentanaModal1/>}></Route>
+                <Route path="/ventanaModal2" element = {<VentanaModal2/>}></Route>
             </Routes>
         </BrowserRouter>
     )

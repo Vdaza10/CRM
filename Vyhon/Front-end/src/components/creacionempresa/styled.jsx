@@ -168,7 +168,7 @@ export const Boton1 = styled.button`
     cursor: pointer;
     &:hover {
         background-color: #3eabee76;
-        color: black;
+        color: gray;
     }
     &:focus {
         outline: none;

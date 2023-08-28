@@ -4,8 +4,12 @@ import Registrarse from "../Input/Registro";
 import Vyhon from "../../img/logito.svg"
 import { BiWorld } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import VentanaModal1 from "../../mensajeRegistro";
 
 const Registro = () => {
+
+const[estadoModal, cambiarEstadoModal] = useState(true)
 
     return (
         <Fondo>
@@ -39,6 +43,12 @@ const Registro = () => {
             </ContainerSelect>
             {/* <p style={{marginRight:"10px"}}></p> */}
             <Link to={"/"} style={{textDecoration:"none", color:"black"}}><Ingresar>Ingres a tu cuenta</Ingresar></Link>
+
+            <VentanaModal1 
+                estado={estadoModal}
+                cambiarEstado = {cambiarEstadoModal}
+            >
+            </VentanaModal1>
         </Fondo>
     )
 }
