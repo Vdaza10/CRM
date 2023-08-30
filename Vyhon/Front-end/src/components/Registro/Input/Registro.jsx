@@ -1,22 +1,12 @@
 import React from "react";
-import {
-    Contenedor,
-    Input,
-    Boton,
-    Seleccionar,
-    Contenedor1,
-    Checkbox,
-    Titulo,
-    TextoImput,
-    TextoCheckbox,
-    ContaienrBoton,
-    Contenedor2,
+import { Contenedor,Input,Boton,Seleccionar,Contenedor1,Checkbox,Titulo,TextoImput,TextoCheckbox,ContaienrBoton,Contenedor2,
 } from "./styled";
 import { useState } from "react";
 import Axios from "axios";
 import validator from "validator";
 import VentanaModal1 from "../../mensajeRegistro";
 import UserExiste from "../../mensajeRegistroYaExiste";
+
 
 
 const Registrarse = () => {
@@ -132,7 +122,7 @@ const Registrarse = () => {
                         // placeholder ="ejemplo@kmas.com"
                         required
                     ></Input>
-                     {correoExistente && (
+                    {correoExistente && (
                     <span
                         style={{
                             fontWeight: "bold",

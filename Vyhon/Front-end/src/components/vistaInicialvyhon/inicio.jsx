@@ -4,11 +4,15 @@ import imagen from "../img/logito.svg"
 // import imagen1 from "../img/pruebainicio.avif"
 import inicio from "../img/crminicio.jpg"
 import herramientas from "../img/herramientas.png"
+import graficas from "../img/graficas.jpeg"
+import seguridad from "../img/seguridad.webp"
+import { Link } from "react-router-dom";
 
 
 const Inicio = () => {
     return(
         <>
+        
     <ContenedorInicial>
         <Contenedor1>
             <Logo src={imagen}></Logo>
@@ -16,15 +20,15 @@ const Inicio = () => {
 
         </Contenedor1>
         <Menucontainer>
-            <Opciones>Crear su cuenta</Opciones>
-            <Opciones>Iniciar sesion</Opciones>
+            <Link to="registrarse" style={{textDecoration:"none", color:"white"}}><Opciones>Crear su cuenta</Opciones></Link>
+            <Link to="principal" style={{textDecoration:"none", color:"white"}}><Opciones >Iniciar sesion</Opciones></Link>
+            
 
         </Menucontainer>
         </ContenedorInicial>
-        <Informacion style={{backgroundImage:`url(${inicio})` , backgroundRepeat: "no-repeat", backgroundSize:"cover"}}>
-            <ContainerTarjetas>
-            <TarjetasInformativas>Vista grafica</TarjetasInformativas>
-            <TarjetasInformativas>Seguridad</TarjetasInformativas>
+        <Informacion style={{backgroundImage:`url(${inicio})` , backgroundRepeat: "no-repeat", backgroundSize:"cover"}}><ContainerTarjetas>
+            <TarjetasInformativas>Vista grafica <ContenedorImagen style={{backgroundImage: `url(${graficas})` ,backgroundRepeat: "no-repeat", backgroundSize:"cover"}}></ContenedorImagen></TarjetasInformativas>
+            <TarjetasInformativas>Seguridad <ContenedorImagen style={{backgroundImage: `url(${seguridad})` ,backgroundRepeat: "no-repeat", backgroundSize:"cover"}}></ContenedorImagen></TarjetasInformativas>
             <TarjetasInformativas>Heramientas<ContenedorImagen style={{backgroundImage: `url(${herramientas})` ,backgroundRepeat: "no-repeat", backgroundSize:"cover"}}></ContenedorImagen></TarjetasInformativas>
             
             </ContainerTarjetas>

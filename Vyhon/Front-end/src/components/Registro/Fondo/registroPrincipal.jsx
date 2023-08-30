@@ -7,11 +7,14 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import VentanaModal1 from "../../mensajeRegistro";
 
+
 const Registro = () => {
 
 const[estadoModal, cambiarEstadoModal] = useState(false)
 
     return (
+        <>
+        
         <Fondo>
             <Ladero>
                 <Ladero1>
@@ -51,6 +54,7 @@ const[estadoModal, cambiarEstadoModal] = useState(false)
             </VentanaModal1>
 
         </Fondo>
+        </>
     )
 }
 export default Registro

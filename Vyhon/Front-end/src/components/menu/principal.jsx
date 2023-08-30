@@ -36,12 +36,12 @@ const Menu = () => {
                     <Link to="/contactos" style={{ textDecoration: "none", color: "white" }}><MenuItem >Contactos</MenuItem></Link>
                     <Link to="/tareas" style={{ textDecoration: "none", color: "white" }}><MenuItem>Tareas</MenuItem></Link>
                     
-                    <MenuItem onClick={toggleDesplegable} style={{ textDecoration: "none", color: "white" }}>Analisis {/* despliega un contenedor que nos da una informacion */}
+                    {/*<MenuItem onClick={toggleDesplegable} style={{ textDecoration: "none", color: "white" }}>Analisis despliega un contenedor que nos da una informacion
                         <Flecha isOpen={desplegado}></Flecha>
                     </MenuItem>
-                        <Despegable desplegado={desplegado}>
-                        <MenuItem >Informes</MenuItem> {/* aparece esta informacion despues de haberle dado clik al menu de analisis */}
-                        <MenuItem>Analisis de marketing y ventas</MenuItem> </Despegable>
+                        {/* <Despegable desplegado={desplegado}> */}
+                        {/*<MenuItem >Informes</MenuItem>*/} {/* aparece esta informacion despues de haberle dado clik al menu de analisis */}
+                        {/*<MenuItem>Analisis de marketing y ventas</MenuItem> </Despegable>*/}
                         <MenuItem style={{ textDecoration: "none", color: "white" }}>Marketing</MenuItem>  {/* Otro ítem del menú */}
             </Menucontainer>
             <ContenedorBusqueda>

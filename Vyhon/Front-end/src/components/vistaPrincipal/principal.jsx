@@ -1,4 +1,4 @@
-import { ConInformacion, Contenedor, ContenedorTarjeta, Tarjeta2, Titulo } from "./styled";
+import { ConInformacion, Contenedor, ContenedorTarjeta, Tarjeta2 } from "./styled";
 import Menu from "../menu/principal";
 import prueba from "../img/carruzel1.avif"
 import prueba1 from "../img/carruzel2.jpg"
@@ -41,7 +41,7 @@ const Vistaprincipal = () => {
                 </Carousel>
             </ContenedorTarjeta>
             <ConInformacion>
-                <Titulo>{informacion.titulo}</Titulo>
+                {/* <Titulo>{informacion.titulo}</Titulo> */}
             </ConInformacion>
         </Contenedor>
         </>
