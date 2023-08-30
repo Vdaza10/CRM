@@ -39,12 +39,13 @@ function Principal  () {
             }
     return(
         <Fondo>
+            
             <Contenedor>
                 <Titulo>¡Bienvenido a VYHON!</Titulo>
                 <Message>{error}</Message>
                 
                 <Parrafo > 
-                    <h4 style={{margin:"0"}}>Email</h4>
+                    <h4 style={{margin:"0"}}>Correo electronico</h4>
                 </Parrafo>
 
                 <Input 
@@ -68,8 +69,8 @@ function Principal  () {
             <ContainerUltimo>
 
             <Button  type="submit" onClick={Login}>Iniciar sesión</Button> <br />
-                <Olvidar href="https://www.google.com/?hl=es"><h4 style={{margin:"0"}}>Olvidaste tu contraseña?</h4></Olvidar> <br />
-                <Olvidar ><Link to={"/registrarse"}><h4 style={{margin:"0",color:"black"}}>Registrate</h4></Link></Olvidar> <br />
+            <Link to={"/recuperar"} style={{color:"black"}}><Olvidar style={{margin:"0"}}><h4 style={{margin:"0"}}>Olvidaste tu contraseña?</h4></Olvidar></Link>
+                <Olvidar ><Link to={"/registrarse"} style={{color:"black"}}><h4 style={{margin:"0",color:"black", marginTop:""}}>Registrate</h4></Link></Olvidar> <br />
             </ContainerUltimo>
                 
                 {/* <Button type="submit" onClick={Login}>Iniciar sesión</Button> */}

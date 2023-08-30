@@ -46,15 +46,24 @@ router.patch('/contacto/:id', contactoCrtl.updateContacto);
 router.delete('/contacto/:id', contactoCrtl.deleteContacto);
 
 //negocio//
+router.post('/negocio', negocioCrtl.crearNegocio)
+
+router.get('/negocio', negocioCrtl.getNegocio);
+
+router.get('/negocio/:id', negocioCrtl.getNegocioId);
+
+router.patch('/negocio/:id', negocioCrtl.updateNegocio);
+
+router.delete('/negocio/:id', negocioCrtl.deleteNegocio); 
 
 
 //segmento//
-
+router.get('/segmento', segmentoCrtl.getSegmento)
 
 //tareas//
 
 
-router.get('/Tareas', tareaCrtl.getTareas);
+router.get('/tareas', tareaCrtl.getTareas);
 
 router.post('/tareas', tareaCrtl.createTarea);
 

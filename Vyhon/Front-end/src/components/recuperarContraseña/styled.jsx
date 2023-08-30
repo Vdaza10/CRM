@@ -18,50 +18,54 @@ export const Contenedor = styled.div`
   background-color: #ffff;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   /* align-items: center; */
   width: 20%;
-  height: 52%;
+  height: 50%;
   border-radius: 15px;
   box-shadow: 4px 4px 55px -29px rgba(0,0,0,0.77);
 `;
+
 export const Titulo = styled.h1`
   text-align: center;
   font-style: italic;
   color: #000000;
   font-size: 25px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  margin-top: 40px;
 `;
+
 export const Parrafo = styled.p`
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  color: #000000f5;
-  margin-left: 10%;
-`;
-export const Input = styled.input`
-  width: 80%;
-  height: 8%;
-  margin-left: 10%;
-  border: none;
-  background-color: #0ba0e63c;
-`;
-export const Olvidar = styled.a`
-  /* text-decoration: none; */
+    font-size: 22px;
+    font-weight: 200;
+    font-style: italic;
+    display: flex;
+    margin-left: 5%;
+    margin-right:5%;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+`
 
-  color: #070707;
-  /* font-family:'Open Sans', sans-serif; */
-  font-size: 15px;
-  margin-left: 15px;
-`;
+export const ConteinerBonton = styled.div`
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* display: flex; */
+`
 
-export const Button = styled.button`
+export const Boton1 = styled.button`
   background-color: rgb(82 186 250);
-  margin-top: 7px;
   color: white;
-  width: 55%;
-  height: 24%;
+  width: 35%;
+  height: 30%;
   border: none;
-  font-size: 17px;
+  margin-right: 20px;
+  margin-top: 30px;
+  font-size: 15px;
   cursor: pointer;
   &:hover {
     background-color: #3eabee76;
@@ -74,17 +78,32 @@ export const Button = styled.button`
   }
 `;
 
-export const ContainerUltimo = styled.div`
-  width: 100%;
-  height: 35%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-export const Message = styled.div`
-    font-size: 10px;
-    color: red;
-    
+export const Boton2 = styled.button`
+    background-color: white;
+    color: #00aaffcd;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    margin-top: 30px;
+    border: solid 1px gray;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #3eabee76;
+        color: #808080aa;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);}
 `
+
+export const Input = styled.input`
+  width: 80%;
+  height:9%;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 16.5px;
+  padding-left: 8px;
+  background-color: #0ba0e63c;
+`;

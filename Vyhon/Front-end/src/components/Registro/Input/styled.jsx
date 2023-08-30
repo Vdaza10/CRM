@@ -66,9 +66,8 @@ export const Boton = styled.button`
     border-radius: 5px;
 
     :hover{
-        background-color: #eee;
-        color: #222;
-        border: 1px solid #000;
+        background-color:#3eaaee93;
+        color: gray;
     } 
 `
 export const Checkbox = styled.div`
@@ -77,6 +76,7 @@ export const Checkbox = styled.div`
     display: flex;
     align-items: center;
     padding-right: 5px;
+    margin-top: 10px;
 `
 
 export const TextoCheckbox = styled.p`
@@ -87,8 +87,9 @@ export const TextoCheckbox = styled.p`
 
 export const Seleccionar = styled.input`
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
 `
 export const TextoImput = styled.p`
     font-size: 15px;

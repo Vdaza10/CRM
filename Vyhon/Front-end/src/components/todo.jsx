@@ -12,16 +12,16 @@ import Retorno9 from "./integracionMarkenting"
 import CrearTarea from "./CreacionTarea"
 import Principal from "./login"
 import Registro from "./Registro/Fondo/registroPrincipal"
-import Vistaprincipal from "./vistaPrincipal/principal"
-import Inicio from "./vistaInicialvyhon/inicio"
+import Recuperar from "./recuperarContraseña"
+import VentanaModal3 from "./mensajeContraseñaCorreo"
 
 const Todo = () => {
     return(
         <BrowserRouter>
             <Routes>
                 {/* Rutas para el menu principal */}
-                <Route path="/" element = {<Inicio/>}> </Route>
-                <Route path="/principal" element = {<Principal/>}> </Route>
+                <Route path="/" element = {<Principal/>}> </Route>
+                <Route path="/recuperar" element = {<Recuperar/>}> </Route>
                 <Route path="/menu" element = {<Menu/>}> </Route>
                 <Route path="/registrarse" element = {<Registro/>}> </Route>
                 {/* Rutas para diferentes sesiones */}
@@ -35,6 +35,7 @@ const Todo = () => {
                 <Route path="/markenting" element = {<Retorno9/>}></Route>
                 <Route path="/creartarea" element = {<CrearTarea/>}></Route>
                 <Route path="/vistaprincipal" element = {<Vistaprincipal/>}></Route>
+                <Route path="/ventanaModal3" element = {<VentanaModal3/>}></Route>
             </Routes>
         </BrowserRouter>
     )
