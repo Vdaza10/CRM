@@ -2,32 +2,42 @@ import React from 'react';
 import { Container , ContenedorModal , Encabezado , Body , Footer , Boton } from './styled';
 import { GrClose } from "react-icons/gr";
 import { FcOk } from "react-icons/fc";
-import { useHistory } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
-
-const VentanaModal2 = ({ estado, cambiarEstado }) => {
 
 
+const VentanaModal2 = ({ estado1, cambiarEstado1 }) => {
+
+    const cerrarModalYRedirigir = () => {
+      // Cerrar el modal (cambiar estado)
+      cambiarEstado1(false);
+
+      // Redirigir a una nueva ruta después de 2 segundos
+      setTimeout(() => {
+
+        // Redirige a la página de inicio
+        window.location.href = "/"  
+        
+      }, 2000);
+    };
 
   return (
     <>
-    {estado && 
-        <Container>
+    {estado1 && 
+        <Container p>
             <ContenedorModal>
                 <Encabezado>
                     <h1>¡Hola!</h1>
-                    <GrClose style={{marginRight:"20px"}} onClick={() => cambiarEstado(false)}/>
+                    <GrClose style={{marginRight:"20px"}} onClick={() => cambiarEstado1(false)}/>
                 </Encabezado>
                 <Body>
                     <h1 style={{fontSize:"90px", marginTop:"25px"}}><FcOk></FcOk></h1>
                     <p>Solo queríamos informarte que hemos enviado un mensaje a tu dirección de correo electrónico. Te sugerimos revisar tu bandeja de entrada.</p>
                 </Body>
                 <Footer>
-                    <Boton>OK</Boton>
+                    <Boton onClick={cerrarModalYRedirigir}>OK</Boton>
                 </Footer>
             </ContenedorModal>
         </Container>
-    }   
+    }
     </>
   );
 };

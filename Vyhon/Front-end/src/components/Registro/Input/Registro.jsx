@@ -15,6 +15,9 @@ import {
 import { useState } from "react";
 import Axios from "axios";
 import validator from "validator";
+import VentanaModal1 from "../../mensajeRegistro";
+import UserExiste from "../../mensajeRegistroYaExiste";
+
 
 const Registrarse = () => {
     const [password, setPassword] = useState("");
@@ -22,6 +25,19 @@ const Registrarse = () => {
     const [empresa, setEmpresa] = useState("");
     const [email, setEmail] = useState("");
 
+    const [correoExistente, setCorreoExistente] = useState(false);
+
+    const[estadoModal1, cambiarEstadoModal1] = useState(false)
+    const[estadoModal4, cambiarEstadoModal4] = useState(false)
+
+    const VentanaModal = () =>{
+        cambiarEstadoModal1(!estadoModal1)
+    }
+
+
+    const VentanaModal4 = () =>{
+        cambiarEstadoModal4(!estadoModal4)
+    }
     const Validacion = (e) => {
         let emai = e.target.value;
 
@@ -31,7 +47,6 @@ const Registrarse = () => {
             // setEmail('enter valid Email');
         }
     };
-
     const Registro = (ev) => {
         ev.preventDefault()
         if(email && password && nombre && empresa){
@@ -42,7 +57,16 @@ const Registrarse = () => {
             nombreEmpresa :empresa
             })
             .then((response) => {
-                console.log(response.data);
+                console.log(response.data)
+                if(response.data.error ){
+                    setCorreoExistente(true)
+                    VentanaModal4()
+                }
+                else{
+
+                    VentanaModal()
+                }
+                
             })
             .catch((error) => {
                 console.log(error);
@@ -50,9 +74,11 @@ const Registrarse = () => {
             })}else{
                 alert('ingrese todos los valores')
             };
+            
     }
 
     return (
+        <>
         <Contenedor>
             <Contenedor2>
                 <Titulo>
@@ -70,6 +96,7 @@ const Registrarse = () => {
                     <Input
                         onChange={(event) => {
                             setNombre(event.target.value);
+                         
                         }}
                         type="text"
                         required
@@ -105,14 +132,15 @@ const Registrarse = () => {
                         // placeholder ="ejemplo@kmas.com"
                         required
                     ></Input>
+                     {correoExistente && (
                     <span
                         style={{
                             fontWeight: "bold",
-                            color: "red",
+                            color: "green",
                         }}
                     >
                         {email}
-                    </span>
+                    </span> )}
                 </Contenedor1>
 
                 <Contenedor1>
@@ -145,7 +173,19 @@ const Registrarse = () => {
                 </ContaienrBoton>
             </Contenedor2>
         </Contenedor>
+        <VentanaModal1 
+                estado={estadoModal1}
+                cambiarEstado = {cambiarEstadoModal1}
+            >
+            </VentanaModal1>
+            <UserExiste
+            estado={estadoModal4}
+            cambiarEstado = {cambiarEstadoModal4}
+            >
+
+            </UserExiste>
+        </>
     );
 };
 
-export default Registrarse;
+export default Registrarse;

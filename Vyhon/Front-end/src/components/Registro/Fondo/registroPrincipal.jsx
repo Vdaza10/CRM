@@ -9,7 +9,7 @@ import VentanaModal1 from "../../mensajeRegistro";
 
 const Registro = () => {
 
-const[estadoModal, cambiarEstadoModal] = useState(true)
+const[estadoModal, cambiarEstadoModal] = useState(false)
 
     return (
         <Fondo>
@@ -42,13 +42,14 @@ const[estadoModal, cambiarEstadoModal] = useState(true)
                 </Idioma>
             </ContainerSelect>
             {/* <p style={{marginRight:"10px"}}></p> */}
-            <Link to={"/"} style={{textDecoration:"none", color:"black"}}><Ingresar>Ingres a tu cuenta</Ingresar></Link>
+            <Link to={"/"} style={{textDecoration:"none", color:"black"}}><Ingresar>Ingrese a tu cuenta</Ingresar></Link>
 
             <VentanaModal1 
                 estado={estadoModal}
                 cambiarEstado = {cambiarEstadoModal}
             >
             </VentanaModal1>
+
         </Fondo>
     )
 }

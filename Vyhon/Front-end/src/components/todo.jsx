@@ -13,8 +13,7 @@ import CrearTarea from "./CreacionTarea"
 import Principal from "./login"
 import Registro from "./Registro/Fondo/registroPrincipal"
 import Recuperar from "./recuperarContraseña"
-import VentanaModal1 from "./mensajeRegistro"
-import VentanaModal2 from "./mensajeContraseña"
+import VentanaModal3 from "./mensajeContraseñaCorreo"
 
 const Todo = () => {
     return(
@@ -35,8 +34,7 @@ const Todo = () => {
                 <Route path="/perfilusuario" element = {<PerfilUsuario/>}></Route>
                 <Route path="/markenting" element = {<Retorno9/>}></Route>
                 <Route path="/creartarea" element = {<CrearTarea/>}></Route>
-                <Route path="/ventanaModal1" element = {<VentanaModal1/>}></Route>
-                <Route path="/ventanaModal2" element = {<VentanaModal2/>}></Route>
+                <Route path="/ventanaModal3" element = {<VentanaModal3/>}></Route>
             </Routes>
         </BrowserRouter>
     )

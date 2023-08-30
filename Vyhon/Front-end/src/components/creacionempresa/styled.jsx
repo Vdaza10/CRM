@@ -99,16 +99,19 @@ export  function App() {
 
 // Estilo para el contenedor principal
 export const Div1 = styled.div`
-    position: absolute;
-    right: 0;
-    height: 89vh;
-    width: 37vh;
-    background-color: white;
+position: absolute;
+    height: 90vh;
+    width: 18%;
+    top: 92px;
+    right: 0px;
+    display: flex; 
+    justify-content: center; 
 `;
 // Estilo para el contenedor que envuelve el contenido principal
 export const Container1 = styled.div`
-    height: 850px;
+    height: 100%;
     width: 100%;
+    background-color: white;
     border: solid 1px black;
 `
 // Estilo para una caja que contiene elementos

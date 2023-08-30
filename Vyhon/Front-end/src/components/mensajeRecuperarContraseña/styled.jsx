@@ -16,19 +16,34 @@ export const ContenedorModal = styled.div`
     height: 30%;
     background-color: #fff;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    /* background-color: red; */
 `
 
-export const Contenido = styled.div`
+export const Encabezado = styled.div`
+width: 100%;
+height: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    /* margin-bottom: 20px;
+    padding-bottom: 20px; */
+    border-bottom: 1px solid #E8E8E8;
+
+    h1{ 
+        font-weight: 500;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+`
+export const Body = styled.div`
     width: 100%;
     height:50%;
     display: flex;
     align-items: center;
+    margin-top: 2%;
 
-    h2{
+    h1{
         margin: 0;
         margin-left: 3%;
     }
@@ -36,29 +51,30 @@ export const Contenido = styled.div`
     p{
         text-align: center;
         font-size: 16px;
-        margin: 0;
-    }
-`
-export const ContainerBoton =  styled.div`
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: end;
-    justify-content: center;
+        margin-right: 25px;
+}
+`;
 
-    button{
-        width: 20%;
-        height: 70%;
+export const Footer = styled.div`
+    width: 100%;
+    height: 28%;
+    display: flex;
+    justify-content: center;
+`
+
+export const Boton = styled.button`
+        width: 15%;
+        height: 55%;
         font-size: 17px;
         border: none;
         background-color: #0ab841ca;
         color: white;
-        margin-left: 10%;
+        border-radius: 5px;
+        margin-left: 3%;
 
 
         &:hover {
         background-color: #0ab8416d;
         color: gray;
         }
-    }
 `

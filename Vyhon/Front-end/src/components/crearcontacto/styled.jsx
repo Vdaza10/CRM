@@ -36,18 +36,20 @@ export const ContactoSelect = () => (
 );
 // Estilo para un div absoluto que contiene otros elementos
 export const Div1 = styled.div`
-    position: absolute;
-    height: 70vh;
-    right: 80px; //separacion
-    
+position: absolute;
+    height: 90vh;
+    width: 18%;
+    top: 92px;
+    right: 0px;
+    display: flex; 
+    justify-content: center; 
 `;
 // Estilo para un contenedor principal
 export const Container1 = styled.div`
-    height: 805px;
-    width: 130%;
+    height: 100%;
+    width: 100%;
     background-color: white;
-    border: solid 1px gray;
-    
+    border: solid 1px black;
 `
 // Estilo para una caja que contiene elementos
 export const Caja = styled.div`

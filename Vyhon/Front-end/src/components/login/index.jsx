@@ -3,6 +3,7 @@ import { Fondo,Contenedor,Titulo,Parrafo,Input, Button, Olvidar , ContainerUltim
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
+
 function Principal  () {
 
     
@@ -38,6 +39,7 @@ function Principal  () {
             }
     return(
         <Fondo>
+            
             <Contenedor>
                 <Titulo>¡Bienvenido a VYHON!</Titulo>
                 <Message>{error}</Message>
