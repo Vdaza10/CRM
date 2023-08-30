@@ -3,8 +3,9 @@ import { Fondo,Contenedor,Titulo,Parrafo,Input, Button, Olvidar , ContainerUltim
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
+
 function Principal  () {
-   
+
     
     const [email, setEmail]= useState("")
     const [password, setPassword]= useState("")
@@ -24,7 +25,7 @@ function Principal  () {
                         if (response.data === "") {
                         alert("el usuario no existe");
                         } else {
-                        window.location.href = "http://localhost:3000/menu";
+                        window.location.href = "http://localhost:3000/vistaprincipal";
                         //   history.push("/menu");
                         }
                     })

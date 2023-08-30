@@ -29,7 +29,6 @@ const Menu = () => {
             <Navegacion>
                 <Logo src= {imagen}></Logo>
             </Navegacion>
-
             <Menucontainer>
                 {/*utilizamos el <link> de react para asi indicar la navegacion */}
                     <Link to="/negocios" style={{textDecoration:"none", color: "white"}}><MenuItem>Negocios</MenuItem></Link> 
@@ -50,8 +49,8 @@ const Menu = () => {
                 type="search"
                 placeholder="buscar"
                 // onChange={(e) => setBusca(e.target.value)}
-/>
-                    <FontAwesomeIcon icon={faSearch} size="lg" style={{ color: "with" }}/>
+                />
+                <FontAwesomeIcon icon={faSearch} size="lg" style={{ color: "with" }}/>
 
                 {/* Menú desplegable de perfil de usuario */}
                 <PerfilUsiario >
