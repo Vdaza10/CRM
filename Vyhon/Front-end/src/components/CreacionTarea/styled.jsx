@@ -49,6 +49,7 @@ export const Input = styled.input`
     height: 6%;
     width: 94%;
     font-size: 17px;
+    outline: none;
 `
 
 export const Caja3 = styled.div`
@@ -107,6 +108,7 @@ export const ContainerInput = styled.div`
     align-items: center;
     justify-content: space-between;
     border: solid gray 1px ;
+    outline: none;
 `
     const options = [
         { value: '1', label: 'opción1' },

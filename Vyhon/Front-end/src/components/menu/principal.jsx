@@ -49,7 +49,6 @@ const Menu = () => {
             <Buscar
                 type="search"
                 placeholder="buscar"
-                // onChange={(e) => setBusca(e.target.value)}
 />
                     <FontAwesomeIcon icon={faSearch} size="lg" style={{ color: "with" }}/>
 

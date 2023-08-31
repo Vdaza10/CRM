@@ -65,14 +65,14 @@ const CrearTarea = ()=> {
                         <ContainerInput>
                         <Input onChange={(event) =>{
                 setResponsable(event.target.value)
-            }} placeholder="Ingresar nombre del responsable" style={{color:'gray',height:"90%",width:"90%", border:"none"}} ></Input>
+            }} placeholder="Ingresar nombre del responsable" style={{color:'gray',height:"90%",width:"90%", border:"none" ,outline: "none"}} ></Input>
                         <FaUser style={{marginRight:"5px"}}/>
                         </ContainerInput>
                         <Parrafo1><h3>Tipo de tarea</h3></Parrafo1>
                         <ContainerInput>
                         <Input  onChange={(event) =>{
                 setTipotarea(event.target.value)
-            }} placeholder="Ingresar tipo de tarea" style={{color:'gray',height:"90%",width:"90%", border:"none"}} ></Input>
+            }} placeholder="Ingresar tipo de tarea" style={{color:'gray',height:"90%",width:"90%", border:"none" ,outline: "none" }} ></Input>
                         <BsFillCalendar2CheckFill style={{marginRight:"5px"}}/>
                         </ContainerInput>
                         <Parrafo1><h3>Fecha</h3></Parrafo1>

@@ -4,7 +4,7 @@ import Retorno2 from "./vista_negocios"
 import Retorno3 from "./contacto"
 import Retorno5 from "./tarea"
 import Retorno4 from "./crearcontacto"
-import Retorno6 from "./creacionTareasOpciones"
+import Retorno6 from "./desplegableTarea"
 import Retorno7 from "./Vistaempresas"
 import Menu from "./menu/principal"
 import PerfilUsuario from "./Perfilusuario"
@@ -13,7 +13,10 @@ import CrearTarea from "./CreacionTarea"
 import Principal from "./login"
 import Registro from "./Registro/Fondo/registroPrincipal"
 import Recuperar from "./recuperarContraseña"
-import VentanaModal3 from "./mensajeContraseñaCorreo"
+import TablaContacto from "./tablaContacto"
+import TablaEmpresa from "./tablaEmpresa"
+import TablaNegocio from "./tablaNegocio"
+import TablaTarea from "./tablaTarea"
 
 const Todo = () => {
     return(
@@ -34,7 +37,10 @@ const Todo = () => {
                 <Route path="/perfilusuario" element = {<PerfilUsuario/>}></Route>
                 <Route path="/markenting" element = {<Retorno9/>}></Route>
                 <Route path="/creartarea" element = {<CrearTarea/>}></Route>
-                <Route path="/ventanaModal3" element = {<VentanaModal3/>}></Route>
+                <Route path="/tablaContacto" element = {<TablaContacto/>}></Route>
+                <Route path="/tablaEmpresa" element = {<TablaEmpresa/>}></Route>
+                <Route path="/tablaNegocio" element = {<TablaNegocio/>}></Route>
+                <Route path="/tablaTarea" element = {<TablaTarea/>}></Route>
             </Routes>
         </BrowserRouter>
     )

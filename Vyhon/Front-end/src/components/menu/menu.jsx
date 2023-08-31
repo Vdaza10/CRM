@@ -30,6 +30,7 @@ export const Menucontainer = styled.ul`
 export const MenuItem = styled.li`
     margin-right: 5%;
     margin-left: 3%;
+    font-family: 'DM Sans', sans-serif;
     cursor: pointer;
 
     &:last-child {

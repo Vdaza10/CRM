@@ -46,6 +46,7 @@ export const Input = styled.input`
     height: 5%;
     width: 90%;
     font-size: 17px;
+    outline: none;
 `
 export const Select = styled.select`
     background-color: #ffffff;
@@ -55,6 +56,7 @@ export const Select = styled.select`
     font-style: italic;
     color: gray;
     border: solid 1px gray;
+    outline: none;
 `
 export const Caja3 = styled.div`
     height: 10%;

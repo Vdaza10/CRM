@@ -152,12 +152,14 @@ export const Input = styled.input`
     height: 5.5%;
     width: 90%;
     font-size: 17px;
+    outline: none;
 `
 // Estilo para el área de texto
 export const Area = styled.textarea`
     height: 20%;
     width: 90%;
     font-size: 17px;
+    outline: none;
 `
 // Estilo para un botón de acción
 export const Boton1 = styled.button`
