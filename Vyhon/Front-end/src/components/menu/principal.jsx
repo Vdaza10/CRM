@@ -48,9 +48,8 @@ const Menu = () => {
             <Buscar
                 type="search"
                 placeholder="buscar"
-                // onChange={(e) => setBusca(e.target.value)}
-                />
-                <FontAwesomeIcon icon={faSearch} size="lg" style={{ color: "with" }}/>
+/>
+                    <FontAwesomeIcon icon={faSearch} size="lg" style={{ color: "with" }}/>
 
                 {/* Menú desplegable de perfil de usuario */}
                 <PerfilUsiario >

@@ -1,15 +1,8 @@
 import styled from "styled-components";
 
-// Componente estilizado llamado Div1
-export const Div1 = styled.div`
-right: 0;
-height: 70vh;
-display: flex;
-justify-content: center;
-`
 // Componente estilizado llamado Container
 export const Container = styled.div`
-    height: 850px;
+    height: 75vh;
     width: 100%;
     display: flex;
     align-items: center;

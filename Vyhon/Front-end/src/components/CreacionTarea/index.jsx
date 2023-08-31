@@ -82,6 +82,10 @@ const CrearTarea = ()=> {
 
 
                         <Parrafo1><h3>Responsable</h3></Parrafo1>
+                        <ContainerInput>
+                        <Input onChange={(event) =>{
+                setResponsable(event.target.value)
+            }} placeholder="Ingresar nombre del responsable" style={{color:'gray',height:"90%",width:"90%", border:"none" ,outline: "none"}} ></Input>
                         <ContainerInput onChange={(e) => {setResponsable(e.target.value)}}/>
                         <FaUser style={{marginRight:"5px"}}/>
 
