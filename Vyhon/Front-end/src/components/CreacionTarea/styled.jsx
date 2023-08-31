@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import Select from "react-select";
-
 
 export const Container = styled.div`
 position: absolute;
@@ -145,3 +143,8 @@ export const ContainerInput = styled.div`
     );
     
     export default ContactoSelect;
+
+    export const Select = styled.select`
+    width: 92%;
+    height: 6%;
+`

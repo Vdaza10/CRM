@@ -209,4 +209,7 @@ export const Caja2 = styled.div`
     align-items: center;
     right: auto;
 `
-
+export const SelectEmpresa = styled.select`
+  width: 92%;
+  height: 6%;
+`

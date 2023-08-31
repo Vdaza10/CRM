@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React from "react";
-import Select from "react-select";
 
 // Opciones para el Select
 const options = [
@@ -151,3 +150,8 @@ export const Caja2 = styled.div`
     align-items: center;
     right: auto;
 `;
+
+export const Select = styled.select`
+    width: 92%;
+    height: 6%;
+`
