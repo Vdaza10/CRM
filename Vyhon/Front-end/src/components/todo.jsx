@@ -17,6 +17,7 @@ import Recuperar from "./recuperarContraseña"
 import VentanaModal3 from "./mensajeContraseñaCorreo"
 import Vistaprincipal from "./vistaPrincipal/principal"
 import Inicio from "./vistaInicialvyhon/inicio"
+import Campaña from "./markenting/markentingp"
 
 const Todo = () => {
     return(
@@ -41,6 +42,7 @@ const Todo = () => {
                 <Route path="/markenting" element = {<Retorno9/>}></Route>
                 <Route path="/creartarea" element = {<CrearTarea/>}></Route>
                 <Route path="/ventanaModal3" element = {<VentanaModal3/>}></Route>
+                <Route path="/campaña" element = {<Campaña/>}></Route>
             </Routes>
         </BrowserRouter>
     )

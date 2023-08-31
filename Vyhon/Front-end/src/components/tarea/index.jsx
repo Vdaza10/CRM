@@ -9,8 +9,6 @@ import CrearTarea from "../CreacionTarea";
 
 
 function Retorno5() {
-
-
     const [desplegable, setDesplegable] = useState(true);
     const opcionTareaDesplegable = () => {
         setDesplegable(!desplegable);

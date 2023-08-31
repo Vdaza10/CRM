@@ -1,21 +1,22 @@
 import React, {useState}from "react";
 import { Link } from "react-router-dom"
-import { Contenedor, ContenedorBusqueda, Despegable, Flecha, ImagenPerfil, Logo, MenuItem, Menucontainer, Menudesplegable, Navegacion, NombreUsuario, PerfilUsiario,Buscar} from "./menu";
+import { Contenedor, ContenedorBusqueda, ImagenPerfil, Logo, MenuItem, Menucontainer, Menudesplegable, Navegacion, NombreUsuario, PerfilUsiario,Buscar} from "./menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import imagen from "../img/logito.png";
 import Retorno1 from "../perfi";
 
+
 const Menu = () => {
     // Estado para controlar la visibilidad del menú desplegable
-    const [desplegado, setDesplegable] = useState(false); 
+    // const [desplegado, setDesplegable] = useState(false); 
     // Estado para controlar la visibilidad del menú desplegable de perfil
     const [perfilDesplegable, setPerfilDesplegable] = useState(false);
 
     //funciones de manejo para manejar los cambios en el estado de los menu
-    const toggleDesplegable = () => { 
-        setDesplegable(!desplegado);
-    };
+    // const toggleDesplegable = () => { 
+    //     setDesplegable(!desplegado);
+    // };
     
     /* nos llevara a una vista con otras opciones */
     const desplegablePerfil = () => {
@@ -42,7 +43,7 @@ const Menu = () => {
                         {/* <Despegable desplegado={desplegado}> */}
                         {/*<MenuItem >Informes</MenuItem>*/} {/* aparece esta informacion despues de haberle dado clik al menu de analisis */}
                         {/*<MenuItem>Analisis de marketing y ventas</MenuItem> </Despegable>*/}
-                        <MenuItem style={{ textDecoration: "none", color: "white" }}>Marketing</MenuItem>  {/* Otro ítem del menú */}
+                        <Link to="/campaña" style={{textDecoration: "none", color:"white"}}><MenuItem>Marketing</MenuItem></Link>{/* Otro ítem del menú */}
             </Menucontainer>
             <ContenedorBusqueda>
             <Buscar
