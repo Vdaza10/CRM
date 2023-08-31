@@ -6,7 +6,6 @@ import Retorno5 from "./tarea"
 import Retorno4 from "./crearcontacto"
 import Retorno6 from "./creacionTareasOpciones"
 import Retorno7 from "./Vistaempresas"
-// import Menu from "./menu/principal"
 import PerfilUsuario from "./Perfilusuario"
 import Retorno9 from "./integracionMarkenting"
 import CrearTarea from "./CreacionTarea"
@@ -14,7 +13,10 @@ import Principal from "./login"
 import Registrarse from "./Registro/Fondo/registroPrincipal"
 import Registro from "./Registro/Fondo/registroPrincipal"
 import Recuperar from "./recuperarContraseña"
-import VentanaModal3 from "./mensajeContraseñaCorreo"
+import TablaContacto from "./tablaContacto"
+import TablaEmpresa from "./tablaEmpresa"
+import TablaNegocio from "./tablaNegocio"
+import TablaTarea from "./tablaTarea"
 import Vistaprincipal from "./vistaPrincipal/principal"
 import Inicio from "./vistaInicialvyhon/inicio"
 import Campaña from "./markenting/markentingp"
@@ -42,7 +44,6 @@ const Todo = () => {
                 <Route path="/markenting" element = {<Retorno9/>}></Route>
                 <Route path="/creartarea" element = {<CrearTarea/>}></Route>
                 <Route path="/ventanaModal3" element = {<VentanaModal3/>}></Route>
-                <Route path="/campaña" element = {<Campaña/>}></Route>
             </Routes>
         </BrowserRouter>
     )

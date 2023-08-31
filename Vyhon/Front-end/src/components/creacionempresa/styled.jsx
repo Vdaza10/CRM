@@ -152,12 +152,14 @@ export const Input = styled.input`
     height: 5.5%;
     width: 90%;
     font-size: 17px;
+    outline: none;
 `
 // Estilo para el área de texto
 export const Area = styled.textarea`
     height: 20%;
     width: 90%;
     font-size: 17px;
+    outline: none;
 `
 // Estilo para un botón de acción
 export const Boton1 = styled.button`
@@ -209,4 +211,7 @@ export const Caja2 = styled.div`
     align-items: center;
     right: auto;
 `
-
+export const SelectEmpresa = styled.select`
+  width: 92%;
+  height: 6%;
+`

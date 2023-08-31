@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React from "react";
-import Select from "react-select";
 
 // Opciones para el Select
 const options = [
@@ -26,6 +25,7 @@ export const ContactoSelect = () => (
         theme={(theme) => ({
             ...theme,
             borderRadius: 0,
+            outline: 'none',
             colors: {
                 ...theme.colors,
                 primary25: '#80808025',
@@ -90,6 +90,7 @@ export const Input = styled.input`
     height: 5%;
     width: 90%;
     font-size: 17px;
+    outline: none;
 `
 // Estilo para un párrafo con estilo itálico y color gris
 export const Parrafo2 = styled.p`
@@ -151,3 +152,8 @@ export const Caja2 = styled.div`
     align-items: center;
     right: auto;
 `;
+
+export const Select = styled.select`
+    width: 92%;
+    height: 6%;
+`

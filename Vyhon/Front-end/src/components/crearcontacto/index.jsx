@@ -1,101 +1,104 @@
-import React, { useState } from "react";
-import { Div1,  Container1, Caja, Parrafo, Img, Parrafo1, Caja1, Input,  Caja2, Boton1, Boton2 , ContactoSelect } from "./styled";
+import React, { useState, useEffect } from "react";
+import { Div1,  Container1, Caja, Parrafo, Img, Parrafo1, Caja1, Input,  Caja2, Boton1, Boton2 , Select } from "./styled";
 import imagen from "../img/img_x.webp"
-import axios from "axios";
-import Validator  from "validator";
+import Axios from "axios";
+
 
 function Retorno4() {
-    const[nombreUsuario, setNombreUsuario] = useState("")
-    const[cargo, setCargo]= useState ("")
-    const[telefono, setTelefono] = useState("")
-    const[email, setEmail]= useState("helena@gmail.com")
-    const[empresaContacto, setEmpresaContacto] = useState("")
 
-    const validacion = (e) => {
-        let emai = e.target.value;
-    
-        if (Validator.isEmail(emai)) {
-            setEmail(emai);
-        } else {
-            // setEmail(""); // Establece el email en blanco si no es válido
-        }
-    }
-    
-        
-
-;
-
-const datosIngresados = (e) => {
-    e.preventDefault();
-
-    if (nombreUsuario && cargo && telefono && empresaContacto) {
-        axios.post("http://localhost:3005/contactos",{
-            nombreUsuario : nombreUsuario,
-            cargo : cargo,
-            telefono: telefono,
-            email : email,
-            empresaContacto : empresaContacto
-        })
-        .then((response) => {
-            console.log(response.data);
-        })
-        .catch((error) => {
-            console.log(error);
-        
-        })}else{
-            alert('ingrese todos los valores')
-        };
-    }
-
-
-    // Estado para controlar si el componente está cerrado o abierto
     const [cerrar, setCerrar] = useState(true);
+    const [nombreContacto, setNombreContacto] = useState("");
+    const [cargo, setCargo] = useState("");
+    const [telefono, setTelefono] = useState("");
+    const [correo, setCorreo] = useState("");
+    const [contactoEmpresa, setContactoEmpresa] = useState();
+    const [empresas, setEmpresas] = useState([])
 
-    //funcion para cerrar el componente
+    const fetchEmpresas = async () => {
+        try {
+            const response = await Axios.get("http://localhost:3005/company");
+            setEmpresas(response.data);
+            console.log(response.data)
+        } catch (error) {
+            console.error("Error al obtener empresas:", error);
+        }
+    };
+
+    useEffect(() => {
+        fetchEmpresas();
+    }, []);
+
     const cerrarcomponente = () => {
         setCerrar(false);
     }
-
-    // Si el estado 'cerrar' es falso, devuelve null para ocultar el componente
     if (!cerrar){
         return null 
-    }
+    };
+
+    const createContacto = async (ev) => {
+        ev.preventDefault();
+        try {
+            const response = await Axios.post("http://localhost:3005/contacto", {
+                nombreContacto,
+                cargo,
+                telefono,
+                correo,
+                contactoEmpresa
+            });
+            console.log("Contacto creado:", response.data);
+        } catch (error) {
+            console.error("Error al crear el contacto:", error);
+        }
+    };
+
+
     return (
         <Div1 >
-            {/* Contenedor principal */}
+
             <Container1>
-                {/* Primera sección */}
+
                 <Caja>
                     <Parrafo><h3>Crear contacto</h3></Parrafo>
-                     {/* Imagen para cerrar el componente */}
+
                     <Img src={imagen} alt="img"  onClick= {cerrarcomponente}/>
                 </Caja>
                 <hr />
-                {/* Segunda sección */}
+
                 <Caja1>
                     <Parrafo1><h3>Nombre</h3></Parrafo1>
-                    <Input placeholder="Ingresar el nombre del contacto" onChange={(event)=>{setNombreUsuario(event.target.value)}} type="text"required></Input>
+                    <Input placeholder="Ingresar el nombre del contacto" onChange={e => setNombreContacto(e.target.value)}/>
+
+
                     <Parrafo1><h3> Cargo</h3></Parrafo1>
-                    <Input placeholder="Ingresa el contacto del contacto" onChange={(event)=>{setCargo(event.target.value)}} type="text"required></Input>
+                    <Input placeholder="Ingresa el contacto del contacto" onChange={e => setCargo(e.target.value)}/>
+
+
                     <Parrafo1><h3>Telefono</h3></Parrafo1>
-                    <Input placeholder="Ingresar el telefono del contacto"onChange= {(event)=>{setTelefono(event.target.value)}} type="number"required></Input>
+                    <Input placeholder="Ingresar el telefono del contacto" onChange={e => setTelefono(e.target.value)}/>
+
+
                     <Parrafo1><h3>Email</h3></Parrafo1>
-                    <Input placeholder="Ingresar el email del contacto" onChange={validacion}  type = "email"
-                    ></Input>
-                    <Parrafo1 onChange= {(event)=>{setEmpresaContacto(event.target.value)}}><h3>Empresa del contacto </h3></Parrafo1>
-                    <ContactoSelect></ContactoSelect>
-                    {/* <Parrafo2><h3>INFORMACION ADICIONAL</h3></Parrafo2> */}
+                    <Input placeholder="Ingresar el email del contacto" onChange={e => setCorreo(e.target.value)}/>
+
+
+                    <Parrafo1><h3>Empresa del contacto </h3></Parrafo1>
+                    <Select value={contactoEmpresa} onChange={e => setContactoEmpresa(e.target.value)}>
+                    {empresas.map(empresa => (
+                        <option key={empresa.idEpresa} value={empresa.idEpresa}>
+                        {empresa.nombreContacto}
+                        </option>))};
+                    </Select>
                 </Caja1>
+
                 <hr />
-                 {/* Tercera sección */}
                 <Caja2>
-                    {/* Botones para cancelar o crear el contacto */}
+
                     <Boton2>Cancelar</Boton2>
-                    <Boton1 onClick ={datosIngresados}>Crear contacto</Boton1>
+                    <Boton1 onClick={createContacto}>Crear contacto</Boton1>
                 </Caja2>
             </Container1>
         </Div1>
 
     );
-    }
+}
 export default Retorno4;
