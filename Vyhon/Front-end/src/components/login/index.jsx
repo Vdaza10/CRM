@@ -25,7 +25,7 @@ function Principal  () {
                         if (response.data === "") {
                         alert("el usuario no existe");
                         } else {
-                        window.location.href = "http://localhost:3000/menu";
+                        window.location.href = "http://localhost:3000/vistaprincipal";
                         //   history.push("/menu");
                         }
                     })

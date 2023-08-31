@@ -31,7 +31,7 @@ return (
                 </Encabezado>
                 <Body>
                     <h1 style={{fontSize:"70px", marginTop:"25px"}}><IoIosCloseCircle style={{color:"red"}}></IoIosCloseCircle></h1>
-                    <p>Nos gustaría comunicarle que su código no se encuentra actualmente registrado en nuestra plataforma, Vyhon.  Le extendemos una invitación para que se registre en nuestro sistema.</p>
+                    <p>Nos gustaría comunicarle que su correo no se encuentra actualmente registrado en nuestra plataforma, Vyhon.  Le extendemos una invitación para que se registre en nuestro sistema.</p>
                 </Body>
                 
             </ContenedorModal>

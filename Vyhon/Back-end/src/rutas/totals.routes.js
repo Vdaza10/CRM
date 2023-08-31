@@ -9,7 +9,7 @@ import * as logincrtl from "../controladores/login.js"
 
 
 //registro
-const router = Router();
+export const router = Router();
 
 router.get('/users', userCrtl.getUsers);
 
@@ -71,4 +71,3 @@ router.patch('/tareas', tareaCrtl.updateTarea);
 
 router.delete('/tareas', tareaCrtl.deleteTarea);
 
-export default router

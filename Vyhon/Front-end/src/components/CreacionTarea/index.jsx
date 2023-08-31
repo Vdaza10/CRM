@@ -6,6 +6,8 @@ import { FaUser } from "react-icons/fa";
 import axios from "axios";
 
 
+
+    
 const CrearTarea = ()=> {
      //CONEXION DEL BACKEND Y EL FRONTEND
         const [negocio, setNegocio] = useState("")
@@ -93,6 +95,6 @@ const CrearTarea = ()=> {
             </Container>
         </div>
     );
-}
+} 
 
 export default CrearTarea;

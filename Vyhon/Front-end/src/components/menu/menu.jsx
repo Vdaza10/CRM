@@ -5,6 +5,7 @@ import perfil from "../img/perfil.jpg"
 // Contenedor principal de la barra de navegación
 export const Contenedor = styled.div`
     height: 30%;
+    width: 100%;
     background-color: #0099ffac;
     color: #000000;
     display: flex;
@@ -25,6 +26,12 @@ export const Logo = styled.img`
 export const Menucontainer = styled.ul`
     list-style: none;
     display: flex;
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+
+    }
+
 `
 // Ítem individual del menú
 export const MenuItem = styled.li`
@@ -32,7 +39,6 @@ export const MenuItem = styled.li`
     margin-left: 3%;
     font-family: 'DM Sans', sans-serif;
     cursor: pointer;
-
     &:last-child {
     margin-right: 45px;
     }    
@@ -138,9 +144,16 @@ export const Buscar = styled.input`
     height: 30px;
     width: 160px;
     margin-right: 5px;
-    border-radius: 5px;
+    border-radius: 5px;
     outline: none;
+    @media screen and (max-width: 900px) {
+        width: 100px;
+    }
+    @media screen and (max-width: 700px) {
+        width: 50px;
+    }
+    @media screen and (max-width: 500px) {
+        width: 1px;
+    }
 `
-
-
 

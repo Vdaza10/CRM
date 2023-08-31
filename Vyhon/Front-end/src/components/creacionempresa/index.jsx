@@ -29,11 +29,11 @@ function Retorno8() {
                     {/* Formulario para crear una empresa */}
                     <Caja1>
                         <Parrafo1><h3>Nombre de la empresa</h3></Parrafo1>
-                        <Input placeholder="Ingresar el nombre de la empresa" ></Input>
-                        <Parrafo1><h3> Segmento</h3></Parrafo1>
+                        <Input placeholder="Ingresar el nombre de la empresa"></Input>
+                        <Parrafo1 ><h3> Segmento</h3></Parrafo1>
                         <App></App>
                         <Parrafo1><h3>URL</h3></Parrafo1>
-                        <Input placeholder="Introduce la dirrección web de la empresa"></Input>
+                        <Input placeholder="Introduce la dirrección web de la empresa" ></Input>
                         <Parrafo1><h3>Resumen</h3></Parrafo1>
                         <Area placeholder="Describe la empresa" ></Area>
                     </Caja1>
